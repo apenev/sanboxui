@@ -1,0 +1,87 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Wir machen NUR die UI, schreibe niemals in diese Nextjs app irgendein Backend, vertrauliche Daten oder Platzhalter! ALLES soll production ready sein.
+
+Hier ein überblick über das projekt:
+
+General Specification for RAG-based Copilot for Sales Agents
+
+Project Overview
+The RAG-based Copilot for sales agents is a system designed to enhance the efficiency of handling customer requests by leveraging Retrieval-Augmented Generation (RAG) techniques. The system aims to streamline the process of managing requests from various channels, initially focusing on email, and prioritize them based on customer value.
+
+Objectives
+Streamline Request Handling: Automate the ingestion and processing of customer requests to reduce manual effort and improve response times.
+
+Prioritize High-Value Customers: Use enriched CRM data to prioritize requests from high-value customers, ensuring they receive prompt attention.
+
+Enhance Agent Efficiency: Provide sales agents with enriched data and predefined response templates to facilitate quick and informed decision-making.
+
+Key Features
+Request Ingestion and Storage
+
+Support for multiple channels, starting with email.
+
+Store requests in AWS RDS Postgres with attributes such as customer details and CRM references.
+
+Data Enrichment and Prioritization
+
+Enrich requests with CRM data (e.g., revenues, order history).
+
+Assign priority based on customer value metrics.
+
+Request Categorization
+
+Categorize requests into predefined types (e.g., product quotation, product recommendation).
+
+Allow for the addition of new categories as needed.
+
+Automated Response Suggestions
+
+Generate predefined answers with placeholders for agent review.
+
+Enable agents to customize and finalize responses before sending.
+
+User Interface
+
+Stateless Next.JS application for managing requests.
+
+Features include request queue display, detailed request panels, and editing capabilities.
+
+Security and Authentication
+
+Protect the system with SAML-based authentication.
+
+Restrict data access based on user roles and permissions.
+
+Technical Specifications
+Backend: Python-based REST API for handling requests and data operations.
+
+Connectors: Initial focus on email collector, with potential expansion to other channels.
+
+UI: Next.JS application interfacing with the backend API for all operations.
+
+API Endpoints
+POST /requests: Ingest new requests.
+
+GET /requests: Retrieve list of requests with filters.
+
+GET /requests/{id}: Retrieve detailed information for a specific request.
+
+PUT /requests/{id}/answer: Update the proposed answer and placeholders.
+
+POST /requests/{id}/send: Send the finalized answer.
+
+Security
+All API endpoints require authentication via SAML.
+
+Data access is controlled based on user roles and permissions.
+
+Conclusion
+The RAG-based Copilot for sales agents is designed to improve the efficiency and effectiveness of handling customer requests by automating processes, enriching data, and providing agents with the tools they need to deliver high-quality service.
+
+image-20250522-093103.png
+
+ 
