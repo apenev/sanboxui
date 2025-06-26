@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { Users, Settings, Shield, Database, Bell, Activity } from "lucide-react"
+import { Users, Settings, Shield, Database, Bell, Activity, ArrowLeft, Home } from "lucide-react"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -58,12 +59,32 @@ export function AdminLayout({ children, activeSection = "users", onSectionChange
       {/* Sidebar */}
       <div className="w-80 border-r bg-card">
         <div className="p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Link href="/">
+              <Button variant="outline" size="sm" className="gap-2">
+                <ArrowLeft className="h-4 w-4" />
+                Back to Dashboard
+              </Button>
+            </Link>
+          </div>
           <h2 className="text-2xl font-bold text-foreground">Admin Panel</h2>
           <p className="text-sm text-muted-foreground mt-1">
             System administration and configuration
           </p>
         </div>
         <Separator />
+        
+        {/* Quick Navigation */}
+        <div className="p-4">
+          <Link href="/">
+            <Button variant="ghost" className="w-full justify-start gap-2 mb-2">
+              <Home className="h-4 w-4" />
+              Main Dashboard
+            </Button>
+          </Link>
+        </div>
+        <Separator />
+        
         <ScrollArea className="flex-1 px-4 py-4">
           <div className="space-y-2">
             {adminSections.map((section) => {
