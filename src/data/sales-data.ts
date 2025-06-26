@@ -83,123 +83,137 @@ export interface SalesRequest {
   }
 }
 
-export const clients: Client[] = [
-  {
-    id: "1",
-    name: "Penev Inc",
-    email: "kontakt@penevinc.com",
-    company: "Penev Inc",
-    revenue: 1200000,
-    industry: "IT-Dienstleistungen",
-    orderHistory: {
-      totalOrders: 45,
-      lastOrderDate: "2024-04-15T10:30:00Z",
-      averageOrderValue: 8500,
-      totalRevenue: 382500
-    },
-    riskScore: 15
+export const clients: Client[] = [{
+  id: "1",
+  name: "TechFlow Solutions GmbH",
+  email: "procurement@techflow-solutions.de",
+  company: "TechFlow Solutions GmbH",
+  revenue: 4500000,
+  industry: "IT-Services & Cloud Solutions",
+  orderHistory: {
+    totalOrders: 156,
+    lastOrderDate: "2024-06-18T11:30:00Z",
+    averageOrderValue: 18500,
+    totalRevenue: 2886000
   },
-  {
-    id: "2",
-    name: "LabyPreise GmbH",
-    email: "kontakt@labypreise.de",
-    company: "LabyPreise GmbH",
-    revenue: 2200000,
-    industry: "Handel",
-    orderHistory: {
-      totalOrders: 78,
-      lastOrderDate: "2024-05-01T14:20:00Z",
-      averageOrderValue: 12000,
-      totalRevenue: 936000
-    },
-    riskScore: 8
+  riskScore: 12
+},
+{
+  id: "2",
+  name: "DataCore Networks AG",
+  email: "purchasing@datacore-networks.com",
+  company: "DataCore Networks AG",
+  revenue: 12800000,
+  industry: "Telekommunikation",
+  orderHistory: {
+    totalOrders: 245,
+    lastOrderDate: "2024-06-20T09:15:00Z",
+    averageOrderValue: 35000,
+    totalRevenue: 8575000
   },
-  {
-    id: "3",
-    name: "Leo Penev",
-    email: "kontakt@leopenev.com",
-    company: "Leo Penev",
-    revenue: 350000,
-    industry: "Beratung",
-    orderHistory: {
-      totalOrders: 12,
-      lastOrderDate: "2024-03-20T09:15:00Z",
-      averageOrderValue: 2500,
-      totalRevenue: 30000
-    },
-    riskScore: 25
+  riskScore: 8
+},
+{
+  id: "3",
+  name: "Alpine Infrastructure Partners",
+  email: "orders@alpine-infra.at",
+  company: "Alpine Infrastructure Partners",
+  revenue: 850000,
+  industry: "Systemintegration",
+  orderHistory: {
+    totalOrders: 28,
+    lastOrderDate: "2024-05-12T14:20:00Z",
+    averageOrderValue: 8200,
+    totalRevenue: 229600
   },
-  {
-    id: "4",
-    name: "LabyPreise AG",
-    email: "kontakt@labypreise-ag.com",
-    company: "LabyPreise AG",
-    revenue: 1800000,
-    industry: "Großhandel",
-    orderHistory: {
-      totalOrders: 120,
-      lastOrderDate: "2024-05-08T16:45:00Z",
-      averageOrderValue: 15000,
-      totalRevenue: 1800000
-    },
-    riskScore: 5
+  riskScore: 22
+},
+{
+  id: "4",
+  name: "Vienna Digital Hub GmbH",
+  email: "tech@vienna-digital.com",
+  company: "Vienna Digital Hub GmbH",
+  revenue: 2900000,
+  industry: "Digitale Transformation",
+  orderHistory: {
+    totalOrders: 89,
+    lastOrderDate: "2024-06-15T16:45:00Z",
+    averageOrderValue: 14500,
+    totalRevenue: 1290500
   },
+  riskScore: 15
+},
+{
+  id: "5",
+  name: "NetSecure Consulting",
+  email: "procurement@netsecure.de",
+  company: "NetSecure Consulting",
+  revenue: 1650000,
+  industry: "Cybersecurity",
+  orderHistory: {
+    totalOrders: 67,
+    lastOrderDate: "2024-06-10T08:30:00Z",
+    averageOrderValue: 22000,
+    totalRevenue: 1474000
+  },
+  riskScore: 18
+}
 ]
 
-export const products: Product[] = [
-  {
-    id: "1",
-    name: "Cloud Migration Suite",
-    category: "Cloud",
-    price: 8999,
-    stock: 15,
-    deliveryTime: "2-3 Werktage",
-    specs: {
-      speed: "Schnellstart",
-      ports: ["API", "Web"],
-      features: ["Automatisierung", "Monitoring"],
-    },
+export const products: Product[] = [{
+  id: "1",
+  name: "Cloud Migration Suite",
+  category: "Cloud",
+  price: 8999,
+  stock: 15,
+  deliveryTime: "2-3 Werktage",
+  specs: {
+    speed: "Schnellstart",
+    ports: ["API", "Web"],
+    features: ["Automatisierung", "Monitoring"],
   },
-  {
-    id: "2",
-    name: "POS Terminal Pro",
-    category: "Kassensysteme",
-    price: 1290,
-    stock: 45,
-    deliveryTime: "Sofort lieferbar",
-    specs: {
-      speed: "Sofort einsatzbereit",
-      ports: ["USB", "LAN"],
-      features: ["Touchscreen", "Cloud-Backup"],
-    },
+},
+{
+  id: "2",
+  name: "POS Terminal Pro",
+  category: "Kassensysteme",
+  price: 1290,
+  stock: 45,
+  deliveryTime: "Sofort lieferbar",
+  specs: {
+    speed: "Sofort einsatzbereit",
+    ports: ["USB", "LAN"],
+    features: ["Touchscreen", "Cloud-Backup"],
   },
-  {
-    id: "3",
-    name: "Security Audit Basic",
-    category: "Security",
-    price: 1990,
-    stock: 0,
-    deliveryTime: "1 Woche",
-    specs: {
-      speed: "1 Woche",
-      ports: ["Remote"],
-      features: ["Bericht", "Empfehlungen"],
-    },
+},
+{
+  id: "3",
+  name: "Security Audit Basic",
+  category: "Security",
+  price: 1990,
+  stock: 0,
+  deliveryTime: "1 Woche",
+  specs: {
+    speed: "1 Woche",
+    ports: ["Remote"],
+    features: ["Bericht", "Empfehlungen"],
   },
-  {
-    id: "4",
-    name: "Barcode Scanner Pro",
-    category: "Hardware",
-    price: 89,
-    stock: 250,
-    deliveryTime: "1-2 Werktage",
-    specs: {
-      speed: "Hochgeschwindigkeit",
-      ports: ["USB", "Bluetooth"],
-      features: ["1D/2D", "Wasserfest"],
-    },
-  },
+},
+{
+  id: "4",
+  name: "Barcode Scanner Pro",
+  category: "Hardware",
+  price: 89,
+  stock: 250,
+  deliveryTime: "1-2 Werktage",
+  specs: {
+    speed: "Hochgeschwindigkeit",
+    ports: ["USB", "Bluetooth"],
+    features: ["1D/2D", "Wasserfest"],
+  }
+}
 ]
+  
 
 export const salesRequests: SalesRequest[] = [
   {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image"
 import { Mail } from "../components/mail/mail"
 import { mails } from "../data/sales-data"

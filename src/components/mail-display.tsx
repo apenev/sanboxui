@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { Mail } from "../../data/sales-data"
+import { Mail } from "../data/sales-data"
 import { format } from "date-fns"
 import { de } from "date-fns/locale"
 import { ArrowLeft, Reply, Forward, Archive, Trash2 } from "lucide-react"

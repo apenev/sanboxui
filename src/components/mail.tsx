@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { useTheme } from "next-themes"
@@ -5,13 +6,13 @@ import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { Input } from "../ui/input"
+import { Input } from "ui/input"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "../ui/resizable"
-import { Separator } from "../ui/separator"
+} from "ui/resizable"
+import { Separator } from "ui/separator"
 import { TooltipProvider } from "../ui/tooltip"
 import { AccountSwitcher } from "./account-switcher"
 import { MailDisplay } from "./mail-display"

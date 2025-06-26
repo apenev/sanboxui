@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Mail } from "../../data/sales-data"
+import { Mail } from "../data/sales-data"
 import { formatDistanceToNow } from "date-fns"
 import { de } from "date-fns/locale"
 
