@@ -6,6 +6,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Mail } from "../data/sales-data"
 import { formatDistanceToNow } from "date-fns"
 import { de } from "date-fns/locale"
+import { useEffect, useState } from "react"
 
 interface MailListProps {
   items: Mail[]
@@ -14,6 +15,12 @@ interface MailListProps {
 }
 
 export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <ScrollArea className="h-full">
       <div className="flex flex-col gap-2 p-4 pt-0">
@@ -40,10 +47,12 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
                 {item.subject}
               </div>
               <div className="text-xs text-muted-foreground">
-                {formatDistanceToNow(new Date(item.date), {
-                  addSuffix: true,
-                  locale: de,
-                })}
+                {mounted
+                  ? formatDistanceToNow(new Date(item.date), {
+                      addSuffix: true,
+                      locale: de,
+                    })
+                  : ""}
               </div>
             </div>
           </Button>
@@ -51,4 +60,4 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
       </div>
     </ScrollArea>
   )
-} 
+}

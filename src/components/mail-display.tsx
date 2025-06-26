@@ -7,6 +7,7 @@ import { Mail } from "../data/sales-data"
 import { format } from "date-fns"
 import { de } from "date-fns/locale"
 import { ArrowLeft, Reply, Forward, Archive, Trash2 } from "lucide-react"
+import { useEffect, useState } from "react"
 
 interface MailDisplayProps {
   mail: Mail | null
@@ -14,6 +15,12 @@ interface MailDisplayProps {
 }
 
 export function MailDisplay({ mail, onBack }: MailDisplayProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   if (!mail) {
     return (
       <div className="flex h-full items-center justify-center">
@@ -36,7 +43,7 @@ export function MailDisplay({ mail, onBack }: MailDisplayProps) {
         <div className="flex-1">
           <h2 className="text-lg font-semibold">{mail.subject}</h2>
           <p className="text-sm text-muted-foreground">
-            Von: {mail.name} &lt;{mail.email}&gt;
+            Von: {mail.name} <{mail.email}>
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -57,9 +64,11 @@ export function MailDisplay({ mail, onBack }: MailDisplayProps) {
       <div className="flex-1 p-4">
         <div className="mb-4">
           <p className="text-sm text-muted-foreground">
-            {format(new Date(mail.date), "EEEE, d. MMMM yyyy 'um' HH:mm", {
-              locale: de,
-            })}
+            {mounted
+              ? format(new Date(mail.date), "EEEE, d. MMMM yyyy 'um' HH:mm", {
+                  locale: de,
+                })
+              : ""}
           </p>
         </div>
         <Separator className="mb-4" />
@@ -71,4 +80,4 @@ export function MailDisplay({ mail, onBack }: MailDisplayProps) {
       </div>
     </div>
   )
-} 
+}
