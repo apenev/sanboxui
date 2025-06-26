@@ -3,7 +3,7 @@
 
 import * as React from "react"
 import { format } from "date-fns"
-import { de } from "date-fns/locale"
+import { enUS } from "date-fns/locale"
 import { 
   Reply, ReplyAll, Forward, Archive, ArchiveX, Trash2, 
   Sparkles, Brain, TrendingUp, CheckCircle2, Euro, 
@@ -69,9 +69,9 @@ export function MailDisplay({ mail }: MailDisplayProps) {
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </div>
-        <h3 className="text-2xl font-semibold">Keine E-Mail ausgewählt</h3>
+        <h3 className="text-2xl font-semibold">No email selected</h3>
         <p className="text-sm text-muted-foreground">
-          Wählen Sie eine E-Mail aus der Liste aus, um sie anzuzeigen.
+          Select an email from the list to display it.
         </p>
       </div>
     )
@@ -90,7 +90,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <Archive className="h-4 w-4" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Archivieren</TooltipContent>
+              <TooltipContent>Archive</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -98,7 +98,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <Reply className="h-4 w-4" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Antworten</TooltipContent>
+              <TooltipContent>Reply</TooltipContent>
             </Tooltip>
           </div>
         </div>
@@ -130,7 +130,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <Archive className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Archivieren</TooltipContent>
+            <TooltipContent>Archive</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -138,7 +138,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <ArchiveX className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Als Spam markieren</TooltipContent>
+            <TooltipContent>Mark as spam</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -146,7 +146,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <Trash2 className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Löschen</TooltipContent>
+            <TooltipContent>Delete</TooltipContent>
           </Tooltip>
           <Separator orientation="vertical" className="mx-1 h-6" />
           <Tooltip>
@@ -155,7 +155,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <Reply className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Antworten</TooltipContent>
+            <TooltipContent>Reply</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -163,11 +163,11 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <ReplyAll className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Allen antworten</TooltipContent>
+            <TooltipContent>Reply all</TooltipContent>
           </Tooltip>
           <Button className="ml-auto" size="sm">
             <Send className="h-4 w-4 mr-2" />
-            Antwort senden
+            Send reply
           </Button>
         </div>
       </div>
@@ -190,24 +190,24 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <h2 className="text-lg font-semibold">{salesRequest.client.name}</h2>
                 <Badge variant={salesRequest.priority === "high" ? "destructive" : 
                                salesRequest.priority === "medium" ? "default" : "secondary"}>
-                  {salesRequest.priority === "high" ? "Hoch" : 
-                   salesRequest.priority === "medium" ? "Mittel" : "Niedrig"}
+                  {salesRequest.priority === "high" ? "High" : 
+                   salesRequest.priority === "medium" ? "Medium" : "Low"}
                 </Badge>
                 <Badge variant="outline">{salesRequest.aiAnalysis.type}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{salesRequest.subject}</p>
               <p className="text-xs text-muted-foreground">
-                Von: {salesRequest.client.email} • {format(new Date(salesRequest.date), "dd. MMM yyyy, HH:mm", { locale: de })}
+                From: {salesRequest.client.email} • {format(new Date(salesRequest.date), "MMM dd, yyyy, HH:mm", { locale: enUS })}
               </p>
             </div>
           </div>
 
           <Tabs defaultValue="message" className="w-full">
             <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="message">Nachricht</TabsTrigger>
-              <TabsTrigger value="analysis">KI-Analyse</TabsTrigger>
-              <TabsTrigger value="customer">Kunde</TabsTrigger>
-              <TabsTrigger value="response">Antwort</TabsTrigger>
+              <TabsTrigger value="message">Message</TabsTrigger>
+              <TabsTrigger value="analysis">AI Analysis</TabsTrigger>
+              <TabsTrigger value="customer">Customer</TabsTrigger>
+              <TabsTrigger value="response">Response</TabsTrigger>
             </TabsList>
 
             {/* Original Message */}
@@ -216,7 +216,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <FileText className="h-5 w-5" />
-                    Ursprüngliche Nachricht
+                    Original Message
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -240,10 +240,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Sparkles className="h-5 w-5 text-primary" />
-                    KI-Analyse
+                    AI Analysis
                   </CardTitle>
                   <CardDescription>
-                    Automatisch generierte Einschätzung und Empfehlungen
+                    Automatically generated assessment and recommendations
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -251,20 +251,20 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <div className="flex items-center justify-between p-3 bg-muted rounded-lg">
                     <div className="flex items-center gap-2">
                       <Brain className="h-4 w-4 text-primary" />
-                      <span className="font-medium">Typ: {salesRequest.aiAnalysis.type}</span>
+                      <span className="font-medium">Type: {salesRequest.aiAnalysis.type}</span>
                     </div>
-                                         <div className="flex items-center gap-2">
-                       <span className="text-sm">Konfidenz:</span>
-                       <Progress value={salesRequest.aiAnalysis.confidence * 100} className="w-20" />
-                       <span className="text-sm font-medium">{Math.round(salesRequest.aiAnalysis.confidence * 100)}%</span>
-                     </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm">Confidence:</span>
+                      <Progress value={salesRequest.aiAnalysis.confidence * 100} className="w-20" />
+                      <span className="text-sm font-medium">{Math.round(salesRequest.aiAnalysis.confidence * 100)}%</span>
+                    </div>
                   </div>
 
                   {/* Market Analysis */}
                   <div className="p-3 bg-muted rounded-lg">
                     <h4 className="flex items-center gap-2 font-medium mb-2">
                       <TrendingUp className="h-4 w-4 text-primary" />
-                      Marktanalyse
+                      Market Analysis
                     </h4>
                     <p className="text-sm text-muted-foreground">
                       {salesRequest.aiAnalysis.marketAnalysis}
@@ -275,19 +275,19 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <div className="p-3 bg-muted rounded-lg">
                     <h4 className="flex items-center gap-2 font-medium mb-2">
                       <Shield className="h-4 w-4 text-primary" />
-                      Risikobewertung
+                      Risk Assessment
                     </h4>
-                                         <div className="flex items-center gap-2 mb-2">
-                       <span className="text-sm">Score:</span>
-                       <Progress 
-                         value={salesRequest.aiAnalysis.riskAssessment.score} 
-                         className={`w-32 ${
-                           salesRequest.aiAnalysis.riskAssessment.score > 80 ? '[&>div]:bg-green-500' :
-                           salesRequest.aiAnalysis.riskAssessment.score > 60 ? '[&>div]:bg-yellow-500' : '[&>div]:bg-red-500'
-                         }`}
-                       />
-                       <span className="text-sm font-medium">{salesRequest.aiAnalysis.riskAssessment.score}/100</span>
-                     </div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-sm">Score:</span>
+                      <Progress 
+                        value={salesRequest.aiAnalysis.riskAssessment.score} 
+                        className={`w-32 ${
+                          salesRequest.aiAnalysis.riskAssessment.score > 80 ? '[&>div]:bg-green-500' :
+                          salesRequest.aiAnalysis.riskAssessment.score > 60 ? '[&>div]:bg-yellow-500' : '[&>div]:bg-red-500'
+                        }`}
+                      />
+                      <span className="text-sm font-medium">{salesRequest.aiAnalysis.riskAssessment.score}/100</span>
+                    </div>
                     <div className="space-y-1">
                       {salesRequest.aiAnalysis.riskAssessment.factors.map((factor, index) => (
                         <div key={index} className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -302,18 +302,18 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <div className="space-y-2">
                     <h4 className="flex items-center gap-2 font-medium">
                       <CheckCircle2 className="h-4 w-4 text-primary" />
-                      Passende Produkte
+                      Matching Products
                     </h4>
                     {salesRequest.aiAnalysis.matchingProducts.map((product) => (
                       <div key={product.id} className="p-3 bg-muted rounded-lg">
                         <div className="flex items-center justify-between mb-2">
                           <span className="font-medium">{product.name}</span>
-                          <span className="text-sm font-medium">{product.price.toLocaleString("de-DE")} €</span>
+                          <span className="text-sm font-medium">${product.price.toLocaleString("en-US")}</span>
                         </div>
                         <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
-                          <div><span className="font-medium">Kategorie:</span> {product.category}</div>
-                          <div><span className="font-medium">Lagerbestand:</span> {product.stock} Stück</div>
-                          <div><span className="font-medium">Lieferzeit:</span> {product.deliveryTime}</div>
+                          <div><span className="font-medium">Category:</span> {product.category}</div>
+                          <div><span className="font-medium">Stock:</span> {product.stock} units</div>
+                          <div><span className="font-medium">Delivery:</span> {product.deliveryTime}</div>
                           <div><span className="font-medium">Features:</span> {product.specs.features.join(", ")}</div>
                         </div>
                       </div>
@@ -325,10 +325,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                     <div className="p-3 bg-muted rounded-lg">
                       <h4 className="flex items-center gap-2 font-medium mb-2">
                         <BarChart3 className="h-4 w-4 text-primary" />
-                        Marktdaten
+                        Market Data
                       </h4>
                       <div className="grid grid-cols-2 gap-2 text-sm mb-2">
-                        <div>Durchschnittspreis: {salesRequest.aiAnalysis.marketData.averagePrice.toLocaleString("de-DE")} €</div>
+                        <div>Average Price: ${salesRequest.aiAnalysis.marketData.averagePrice.toLocaleString("en-US")}</div>
                         <div>Trend: <Badge variant="outline">{salesRequest.aiAnalysis.marketData.trend}</Badge></div>
                       </div>
                       <p className="text-xs text-muted-foreground">{salesRequest.aiAnalysis.marketData.recommendation}</p>
@@ -340,10 +340,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                     <div className="p-3 bg-primary/10 rounded-lg">
                       <h4 className="flex items-center gap-2 font-medium mb-1">
                         <Euro className="h-4 w-4 text-primary" />
-                        KI-Preisvorschlag
+                        AI Price Suggestion
                       </h4>
                       <div className="text-2xl font-bold text-primary">
-                        {salesRequest.aiAnalysis.suggestedPrice.toLocaleString("de-DE")} €
+                        ${salesRequest.aiAnalysis.suggestedPrice.toLocaleString("en-US")}
                       </div>
                     </div>
                   )}
@@ -357,25 +357,25 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Building2 className="h-5 w-5" />
-                    Kundendaten
+                    Customer Data
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium">Unternehmen</label>
+                      <label className="text-sm font-medium">Company</label>
                       <p className="text-sm text-muted-foreground">{salesRequest.client.company}</p>
                     </div>
                     <div>
-                      <label className="text-sm font-medium">Branche</label>
+                      <label className="text-sm font-medium">Industry</label>
                       <p className="text-sm text-muted-foreground">{salesRequest.client.industry}</p>
                     </div>
                     <div>
-                      <label className="text-sm font-medium">Jahresumsatz</label>
-                      <p className="text-sm text-muted-foreground">{salesRequest.client.revenue.toLocaleString("de-DE")} €</p>
+                      <label className="text-sm font-medium">Annual Revenue</label>
+                      <p className="text-sm text-muted-foreground">${salesRequest.client.revenue.toLocaleString("en-US")}</p>
                     </div>
                     <div>
-                      <label className="text-sm font-medium">Risiko-Score</label>
+                      <label className="text-sm font-medium">Risk Score</label>
                       <p className="text-sm text-muted-foreground">{salesRequest.client.riskScore}/100</p>
                     </div>
                   </div>
@@ -385,29 +385,29 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <div>
                     <h4 className="flex items-center gap-2 font-medium mb-3">
                       <Calendar className="h-4 w-4" />
-                      Bestellhistorie
+                      Order History
                     </h4>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium">Gesamtbestellungen</label>
+                        <label className="text-sm font-medium">Total Orders</label>
                         <p className="text-sm text-muted-foreground">{salesRequest.client.orderHistory.totalOrders}</p>
                       </div>
                       <div>
-                        <label className="text-sm font-medium">Letzte Bestellung</label>
+                        <label className="text-sm font-medium">Last Order</label>
                         <p className="text-sm text-muted-foreground">
-                          {format(new Date(salesRequest.client.orderHistory.lastOrderDate), "dd.MM.yyyy", { locale: de })}
+                          {format(new Date(salesRequest.client.orderHistory.lastOrderDate), "MM/dd/yyyy", { locale: enUS })}
                         </p>
                       </div>
                       <div>
-                        <label className="text-sm font-medium">Durchschnittlicher Bestellwert</label>
+                        <label className="text-sm font-medium">Average Order Value</label>
                         <p className="text-sm text-muted-foreground">
-                          {salesRequest.client.orderHistory.averageOrderValue.toLocaleString("de-DE")} €
+                          ${salesRequest.client.orderHistory.averageOrderValue.toLocaleString("en-US")}
                         </p>
                       </div>
                       <div>
-                        <label className="text-sm font-medium">Gesamtumsatz</label>
+                        <label className="text-sm font-medium">Total Revenue</label>
                         <p className="text-sm text-muted-foreground">
-                          {salesRequest.client.orderHistory.totalRevenue.toLocaleString("de-DE")} €
+                          ${salesRequest.client.orderHistory.totalRevenue.toLocaleString("en-US")}
                         </p>
                       </div>
                     </div>
@@ -422,25 +422,25 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Edit3 className="h-5 w-5" />
-                    Antwort bearbeiten
+                    Edit Response
                   </CardTitle>
                   <CardDescription>
-                    KI-generierte Antwort mit Platzhaltern. Bearbeiten Sie die Antwort und füllen Sie die Platzhalter aus.
+                    AI-generated response with placeholders. Edit the response and fill in the placeholders.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {/* Placeholders */}
                   <div className="grid grid-cols-2 gap-4">
                     {Object.entries(placeholders).map(([key, value]) => (
-                                             <div key={key} className="space-y-2">
-                         <label className="text-sm font-medium">{key}</label>
-                         <Input
-                           type="text"
-                           value={value}
-                           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPlaceholders(prev => ({ ...prev, [key]: e.target.value }))}
-                           placeholder={`Wert für ${key}`}
-                         />
-                       </div>
+                      <div key={key} className="space-y-2">
+                        <label className="text-sm font-medium">{key}</label>
+                        <Input
+                          type="text"
+                          value={value}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPlaceholders(prev => ({ ...prev, [key]: e.target.value }))}
+                          placeholder={`Value for ${key}`}
+                        />
+                      </div>
                     ))}
                   </div>
 
@@ -448,18 +448,18 @@ export function MailDisplay({ mail }: MailDisplayProps) {
 
                   {/* Editable Response */}
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Antworttext</label>
+                    <label className="text-sm font-medium mb-2 block">Response Text</label>
                     <Textarea
                       value={editableResponse}
                       onChange={(e) => setEditableResponse(e.target.value)}
                       className="min-h-[300px] text-sm"
-                      placeholder="Bearbeiten Sie hier Ihre Antwort..."
+                      placeholder="Edit your response here..."
                     />
                   </div>
 
                   {/* Preview */}
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Vorschau (mit Platzhaltern ersetzt)</label>
+                    <label className="text-sm font-medium mb-2 block">Preview (with placeholders replaced)</label>
                     <div className="p-3 bg-muted rounded-lg whitespace-pre-wrap text-sm">
                       {replaceePlaceholders(editableResponse, placeholders)}
                     </div>
@@ -468,10 +468,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <div className="flex gap-2">
                     <Button>
                       <Send className="h-4 w-4 mr-2" />
-                      Antwort senden
+                      Send response
                     </Button>
                     <Button variant="outline">
-                      Als Entwurf speichern
+                      Save as draft
                     </Button>
                   </div>
                 </CardContent>
@@ -482,4 +482,4 @@ export function MailDisplay({ mail }: MailDisplayProps) {
       </ScrollArea>
     </div>
   )
-} 
+}

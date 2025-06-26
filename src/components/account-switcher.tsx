@@ -70,15 +70,15 @@ export function AccountSwitcher({ accounts }: AccountSwitcherProps) {
         <DropdownMenuGroup>
           <DropdownMenuItem>
             <Plus className="mr-2 h-4 w-4" />
-            <span>Neuen Kunden hinzufügen</span>
+            <span>Add New Customer</span>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Settings className="mr-2 h-4 w-4" />
-            <span>Einstellungen</span>
+            <span>Settings</span>
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )
-} 
+}

@@ -59,7 +59,7 @@ export function Mail({
     setMounted(true)
   }, [])
 
-  // Bestimme das aktuelle Theme
+  // Determine current theme
   const currentTheme = theme === 'system' ? systemTheme : theme
 
   return (
@@ -125,25 +125,25 @@ export function Mail({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Posteingang",
+                title: "Inbox",
                 label: "128",
                 icon: Inbox,
                 variant: "default",
               },
               {
-                title: "Entwürfe",
+                title: "Drafts",
                 label: "9",
                 icon: File,
                 variant: "ghost",
               },
               {
-                title: "Gesendet",
+                title: "Sent",
                 label: "",
                 icon: Send,
                 variant: "ghost",
               },
               {
-                title: "Papierkorb",
+                title: "Trash",
                 label: "",
                 icon: Trash2,
                 variant: "ghost",
@@ -155,7 +155,7 @@ export function Mail({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Sales Anfragen",
+                title: "Sales Requests",
                 label: "972",
                 icon: Users2,
                 variant: "ghost",
@@ -173,20 +173,20 @@ export function Mail({
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={20}>
           <Tabs defaultValue="all" className="h-full">
             <div className="flex items-center px-4 py-2">
-              <h1 className="text-xl font-bold">Posteingang</h1>
+              <h1 className="text-xl font-bold">Inbox</h1>
               <div className="ml-auto flex items-center gap-2">
                 <TabsList>
                   <TabsTrigger value="all">
-                    Alle
+                    All
                   </TabsTrigger>
                   <TabsTrigger value="unread">
-                    Ungelesen
+                    Unread
                   </TabsTrigger>
                   <TabsTrigger value="read">
-                    Gelesen
+                    Read
                   </TabsTrigger>
                   <TabsTrigger value="important">
-                    Wichtig
+                    Important
                   </TabsTrigger>
                 </TabsList>
                 <ThemeToggle />
@@ -197,7 +197,7 @@ export function Mail({
               <form>
                 <div className="relative">
                   <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Suchen" className="pl-8" />
+                  <Input placeholder="Search" className="pl-8" />
                 </div>
               </form>
             </div>
@@ -211,7 +211,7 @@ export function Mail({
               <MailList items={mails.filter((item) => item.read)} selectedMail={selectedMail} onSelectMail={setSelectedMail} />
             </TabsContent>
             <TabsContent value="important" className="m-0">
-              <MailList items={mails.filter((item) => item.labels?.includes("Wichtig"))} selectedMail={selectedMail} onSelectMail={setSelectedMail} />
+              <MailList items={mails.filter((item) => item.labels?.includes("Important"))} selectedMail={selectedMail} onSelectMail={setSelectedMail} />
             </TabsContent>
           </Tabs>
         </ResizablePanel>
@@ -224,4 +224,4 @@ export function Mail({
       </ResizablePanelGroup>
     </TooltipProvider>
   )
-} 
+}

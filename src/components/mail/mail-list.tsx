@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { formatDistanceToNow } from "date-fns"
-import { de } from "date-fns/locale"
+import { enUS } from "date-fns/locale"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -59,7 +59,7 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
                 >
                   {formatDistanceToNow(new Date(item.date), {
                     addSuffix: true,
-                    locale: de,
+                    locale: enUS,
                   })}
                 </div>
               </div>
@@ -85,13 +85,13 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
 }
 
 function getBadgeVariantFromLabel(label: string) {
-  if (["Wichtig", "Dringend"].includes(label)) {
+  if (["Important", "Urgent"].includes(label)) {
     return "destructive"
   }
 
-  if (["Anfrage", "Beratung"].includes(label)) {
+  if (["Request", "Consultation"].includes(label)) {
     return "default"
   }
 
   return "secondary"
-} 
+}

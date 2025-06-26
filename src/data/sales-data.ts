@@ -46,7 +46,7 @@ export interface MarketData {
 }
 
 export interface AIAnalysis {
-  type: "Produktanfrage" | "Preisanfrage" | "Beratung" | "Großbestellung" | "Support" | "Gebrauchtverkauf"
+  type: "Product Request" | "Price Inquiry" | "Consultation" | "Bulk Order" | "Support" | "Used Equipment Sale"
   confidence: number
   marketAnalysis: string
   matchingProducts: Product[]
@@ -89,7 +89,7 @@ export const clients: Client[] = [{
   email: "procurement@techflow-solutions.de",
   company: "TechFlow Solutions GmbH",
   revenue: 4500000,
-  industry: "IT-Services & Cloud Solutions",
+  industry: "IT Services & Cloud Solutions",
   orderHistory: {
     totalOrders: 156,
     lastOrderDate: "2024-06-18T11:30:00Z",
@@ -104,7 +104,7 @@ export const clients: Client[] = [{
   email: "purchasing@datacore-networks.com",
   company: "DataCore Networks AG",
   revenue: 12800000,
-  industry: "Telekommunikation",
+  industry: "Telecommunications",
   orderHistory: {
     totalOrders: 245,
     lastOrderDate: "2024-06-20T09:15:00Z",
@@ -119,7 +119,7 @@ export const clients: Client[] = [{
   email: "orders@alpine-infra.at",
   company: "Alpine Infrastructure Partners",
   revenue: 850000,
-  industry: "Systemintegration",
+  industry: "System Integration",
   orderHistory: {
     totalOrders: 28,
     lastOrderDate: "2024-05-12T14:20:00Z",
@@ -134,7 +134,7 @@ export const clients: Client[] = [{
   email: "tech@vienna-digital.com",
   company: "Vienna Digital Hub GmbH",
   revenue: 2900000,
-  industry: "Digitale Transformation",
+  industry: "Digital Transformation",
   orderHistory: {
     totalOrders: 89,
     lastOrderDate: "2024-06-15T16:45:00Z",
@@ -166,24 +166,24 @@ export const products: Product[] = [{
   category: "Cloud",
   price: 8999,
   stock: 15,
-  deliveryTime: "2-3 Werktage",
+  deliveryTime: "2-3 business days",
   specs: {
-    speed: "Schnellstart",
+    speed: "Quick start",
     ports: ["API", "Web"],
-    features: ["Automatisierung", "Monitoring"],
+    features: ["Automation", "Monitoring"],
   },
 },
 {
   id: "2",
   name: "POS Terminal Pro",
-  category: "Kassensysteme",
+  category: "POS Systems",
   price: 1290,
   stock: 45,
-  deliveryTime: "Sofort lieferbar",
+  deliveryTime: "In stock",
   specs: {
-    speed: "Sofort einsatzbereit",
+    speed: "Ready to use",
     ports: ["USB", "LAN"],
-    features: ["Touchscreen", "Cloud-Backup"],
+    features: ["Touchscreen", "Cloud backup"],
   },
 },
 {
@@ -192,11 +192,11 @@ export const products: Product[] = [{
   category: "Security",
   price: 1990,
   stock: 0,
-  deliveryTime: "1 Woche",
+  deliveryTime: "1 week",
   specs: {
-    speed: "1 Woche",
+    speed: "1 week",
     ports: ["Remote"],
-    features: ["Bericht", "Empfehlungen"],
+    features: ["Report", "Recommendations"],
   },
 },
 {
@@ -205,11 +205,11 @@ export const products: Product[] = [{
   category: "Hardware",
   price: 89,
   stock: 250,
-  deliveryTime: "1-2 Werktage",
+  deliveryTime: "1-2 business days",
   specs: {
-    speed: "Hochgeschwindigkeit",
+    speed: "High speed",
     ports: ["USB", "Bluetooth"],
-    features: ["1D/2D", "Wasserfest"],
+    features: ["1D/2D", "Waterproof"],
   }
 }
 ]
@@ -219,8 +219,8 @@ export const salesRequests: SalesRequest[] = [
   {
     id: "1",
     client: clients[0],
-    subject: "Angebot für Cloud-Migration",
-    text: "Sehr geehrtes Team,\n\nwir möchten unsere Infrastruktur in die Cloud migrieren. Bitte senden Sie uns ein Angebot für die Migration und den laufenden Support.\n\nMit freundlichen Grüßen\nPenev Inc",
+    subject: "Quote for Cloud Migration",
+    text: "Dear Team,\n\nWe would like to migrate our infrastructure to the cloud. Please send us a quote for the migration and ongoing support.\n\nBest regards\nPenev Inc",
     date: "2024-05-10T09:00:00Z",
     status: "new",
     priority: "high",
@@ -229,17 +229,17 @@ export const salesRequests: SalesRequest[] = [
       messages: [
         {
           id: "msg-1",
-          from: "kontakt@penevinc.com",
+          from: "contact@penevinc.com",
           to: "sales@company.com",
           date: "2024-05-10T09:00:00Z",
-          content: "Sehr geehrtes Team,\n\nwir möchten unsere Infrastruktur in die Cloud migrieren. Bitte senden Sie uns ein Angebot für die Migration und den laufenden Support.\n\nMit freundlichen Grüßen\nPenev Inc"
+          content: "Dear Team,\n\nWe would like to migrate our infrastructure to the cloud. Please send us a quote for the migration and ongoing support.\n\nBest regards\nPenev Inc"
         }
       ]
     },
     aiAnalysis: {
-      type: "Produktanfrage",
+      type: "Product Request",
       confidence: 0.93,
-      marketAnalysis: "Penev Inc ist ein etabliertes IT-Unternehmen mit stabiler Wachstumsstrategie. Der Cloud-Migration-Markt zeigt starke Nachfrage mit 15% jährlichem Wachstum.",
+      marketAnalysis: "Penev Inc is an established IT company with stable growth strategy. The cloud migration market shows strong demand with 15% annual growth.",
       matchingProducts: [products[0]],
       suggestedPrice: 8999,
       marketData: {
@@ -250,26 +250,26 @@ export const salesRequests: SalesRequest[] = [
           { competitor: "CloudTech Solutions", price: 9200 },
           { competitor: "MigrationPro", price: 8750 }
         ],
-        recommendation: "Unser Preis liegt 5% unter dem Marktdurchschnitt - sehr wettbewerbsfähig."
+        recommendation: "Our price is 5% below market average - very competitive."
       },
       riskAssessment: {
         score: 85,
-        factors: ["Starke Zahlungshistorie", "Wachsende Industrie", "Langfristige Partnerschaft"]
+        factors: ["Strong payment history", "Growing industry", "Long-term partnership"]
       },
-      suggestedResponse: "Sehr geehrtes Team von Penev Inc,\n\nvielen Dank für Ihr Interesse an unserer Cloud Migration Suite. Basierend auf Ihrer Anfrage erstellen wir Ihnen gerne ein maßgeschneidertes Angebot.\n\n**Angebot:**\n- Cloud Migration Suite: [PREIS] €\n- Lieferzeit: [LIEFERZEIT]\n- Support: [SUPPORT_OPTIONEN]\n\nAufgrund Ihrer langjährigen Partnerschaft können wir Ihnen einen Sonderpreis von [SONDERPREIS] € anbieten.\n\nFür Rückfragen stehen wir Ihnen gerne zur Verfügung.\n\nMit freundlichen Grüßen\nIhr Sales Team",
+      suggestedResponse: "Dear Penev Inc Team,\n\nThank you for your interest in our Cloud Migration Suite. Based on your inquiry, we're happy to create a customized quote for you.\n\n**Quote:**\n- Cloud Migration Suite: [PRICE] $\n- Delivery time: [DELIVERY_TIME]\n- Support: [SUPPORT_OPTIONS]\n\nDue to your long-standing partnership, we can offer you a special price of [SPECIAL_PRICE] $.\n\nPlease don't hesitate to contact us with any questions.\n\nBest regards\nYour Sales Team",
       placeholders: {
-        "PREIS": "8.999",
-        "LIEFERZEIT": "2-3 Werktage",
-        "SUPPORT_OPTIONEN": "24/7 Premium Support",
-        "SONDERPREIS": "8.499"
+        "PRICE": "8,999",
+        "DELIVERY_TIME": "2-3 business days",
+        "SUPPORT_OPTIONS": "24/7 Premium Support",
+        "SPECIAL_PRICE": "8,499"
       }
     },
   },
   {
     id: "2",
     client: clients[1],
-    subject: "Preisübersicht für POS-Systeme",
-    text: "Hallo,\n\nwir benötigen eine aktuelle Preisübersicht für Ihre POS-Systeme. Gibt es Mengenrabatte?\n\nBeste Grüße\nLabyPreise GmbH",
+    subject: "Price Overview for POS Systems",
+    text: "Hello,\n\nWe need a current price overview for your POS systems. Are there volume discounts?\n\nBest regards\nLabyPreise GmbH",
     date: "2024-05-09T14:30:00Z",
     status: "new",
     priority: "medium",
@@ -278,17 +278,17 @@ export const salesRequests: SalesRequest[] = [
       messages: [
         {
           id: "msg-2",
-          from: "kontakt@labypreise.de",
+          from: "contact@labypreise.de",
           to: "sales@company.com",
           date: "2024-05-09T14:30:00Z",
-          content: "Hallo,\n\nwir benötigen eine aktuelle Preisübersicht für Ihre POS-Systeme. Gibt es Mengenrabatte?\n\nBeste Grüße\nLabyPreise GmbH"
+          content: "Hello,\n\nWe need a current price overview for your POS systems. Are there volume discounts?\n\nBest regards\nLabyPreise GmbH"
         }
       ]
     },
     aiAnalysis: {
-      type: "Preisanfrage",
+      type: "Price Inquiry",
       confidence: 0.88,
-      marketAnalysis: "LabyPreise GmbH ist ein etablierter Handelspartner mit hohem Bestellvolumen. POS-Systeme zeigen stabilen Markt mit guten Margen.",
+      marketAnalysis: "LabyPreise GmbH is an established trading partner with high order volume. POS systems show stable market with good margins.",
       matchingProducts: [products[1]],
       suggestedPrice: 1290,
       marketData: {
@@ -299,28 +299,28 @@ export const salesRequests: SalesRequest[] = [
           { competitor: "POS Direct", price: 1320 },
           { competitor: "Terminal Solutions", price: 1280 }
         ],
-        recommendation: "Competitive pricing mit Potenzial für Mengenrabatte."
+        recommendation: "Competitive pricing with potential for volume discounts."
       },
       riskAssessment: {
         score: 92,
-        factors: ["Exzellente Zahlungshistorie", "Großvolumen-Kunde", "Langfristige Beziehung"]
+        factors: ["Excellent payment history", "High-volume customer", "Long-term relationship"]
       },
-      suggestedResponse: "Hallo Team von LabyPreise GmbH,\n\nvielen Dank für Ihre Anfrage zu unseren POS-Systemen.\n\n**Aktuelle Preisliste:**\n- POS Terminal Pro: [EINZELPREIS] € (Einzelpreis)\n- Ab 10 Stück: [MENGENPREIS_10] € pro Stück\n- Ab 25 Stück: [MENGENPREIS_25] € pro Stück\n\n**Zusätzliche Vorteile:**\n- [LIEFERZEIT]\n- [GARANTIE]\n- [SUPPORT]\n\nGerne erstellen wir Ihnen ein individuelles Angebot basierend auf Ihrer gewünschten Stückzahl.\n\nBeste Grüße\nIhr Sales Team",
+      suggestedResponse: "Hello LabyPreise GmbH Team,\n\nThank you for your inquiry about our POS systems.\n\n**Current Price List:**\n- POS Terminal Pro: [UNIT_PRICE] $ (unit price)\n- From 10 units: [VOLUME_PRICE_10] $ per unit\n- From 25 units: [VOLUME_PRICE_25] $ per unit\n\n**Additional Benefits:**\n- [DELIVERY_TIME]\n- [WARRANTY]\n- [SUPPORT]\n\nWe'd be happy to create an individual quote based on your desired quantity.\n\nBest regards\nYour Sales Team",
       placeholders: {
-        "EINZELPREIS": "1.290",
-        "MENGENPREIS_10": "1.190",
-        "MENGENPREIS_25": "1.090",
-        "LIEFERZEIT": "Sofort lieferbar",
-        "GARANTIE": "3 Jahre Garantie",
-        "SUPPORT": "Kostenloser Setup-Service"
+        "UNIT_PRICE": "1,290",
+        "VOLUME_PRICE_10": "1,190",
+        "VOLUME_PRICE_25": "1,090",
+        "DELIVERY_TIME": "In stock",
+        "WARRANTY": "3-year warranty",
+        "SUPPORT": "Free setup service"
       }
     },
   },
   {
     id: "3",
     client: clients[2],
-    subject: "Beratung zu IT-Sicherheit",
-    text: "Guten Tag,\n\nich habe Interesse an einer Beratung zur IT-Sicherheit für mein Unternehmen. Bitte kontaktieren Sie mich für einen Termin.\n\nViele Grüße\nLeo Penev",
+    subject: "IT Security Consultation",
+    text: "Good day,\n\nI'm interested in IT security consultation for my company. Please contact me to schedule an appointment.\n\nBest regards\nLeo Penev",
     date: "2024-05-08T11:15:00Z",
     status: "new",
     priority: "low",
@@ -329,40 +329,40 @@ export const salesRequests: SalesRequest[] = [
       messages: [
         {
           id: "msg-3",
-          from: "kontakt@leopenev.com",
+          from: "contact@leopenev.com",
           to: "sales@company.com",
           date: "2024-05-08T11:15:00Z",
-          content: "Guten Tag,\n\nich habe Interesse an einer Beratung zur IT-Sicherheit für mein Unternehmen. Bitte kontaktieren Sie mich für einen Termin.\n\nViele Grüße\nLeo Penev"
+          content: "Good day,\n\nI'm interested in IT security consultation for my company. Please contact me to schedule an appointment.\n\nBest regards\nLeo Penev"
         }
       ]
     },
     aiAnalysis: {
-      type: "Beratung",
+      type: "Consultation",
       confidence: 0.81,
-      marketAnalysis: "Leo Penev führt ein kleineres Beratungsunternehmen. IT-Sicherheit ist ein wachsender Markt mit hoher Nachfrage im KMU-Segment.",
+      marketAnalysis: "Leo Penev runs a smaller consulting company. IT security is a growing market with high demand in the SME segment.",
       matchingProducts: [products[2]],
       suggestedPrice: 1990,
       riskAssessment: {
         score: 75,
-        factors: ["Kleinere Auftragsgröße", "Beratungsbranche", "Neue Geschäftsbeziehung"]
+        factors: ["Smaller order size", "Consulting industry", "New business relationship"]
       },
-      suggestedResponse: "Guten Tag Herr Penev,\n\nvielen Dank für Ihr Interesse an unserer IT-Sicherheitsberatung.\n\n**Unser Angebot:**\n- Security Audit Basic: [PREIS] €\n- Umfang: [UMFANG]\n- Dauer: [DAUER]\n- Lieferzeit: [LIEFERZEIT]\n\n**Termine verfügbar:**\n- [TERMIN_1]\n- [TERMIN_2]\n- [TERMIN_3]\n\nGerne können wir ein unverbindliches Erstgespräch vereinbaren.\n\nViele Grüße\nIhr Security Team",
+      suggestedResponse: "Good day Mr. Penev,\n\nThank you for your interest in our IT security consultation.\n\n**Our Offer:**\n- Security Audit Basic: [PRICE] $\n- Scope: [SCOPE]\n- Duration: [DURATION]\n- Delivery time: [DELIVERY_TIME]\n\n**Available Appointments:**\n- [APPOINTMENT_1]\n- [APPOINTMENT_2]\n- [APPOINTMENT_3]\n\nWe'd be happy to schedule a non-binding initial consultation.\n\nBest regards\nYour Security Team",
       placeholders: {
-        "PREIS": "1.990",
-        "UMFANG": "Vollständige Sicherheitsanalyse",
-        "DAUER": "1 Woche",
-        "LIEFERZEIT": "Kann sofort starten",
-        "TERMIN_1": "Nächste Woche Dienstag",
-        "TERMIN_2": "Nächste Woche Donnerstag", 
-        "TERMIN_3": "Übernächste Woche Montag"
+        "PRICE": "1,990",
+        "SCOPE": "Complete security analysis",
+        "DURATION": "1 week",
+        "DELIVERY_TIME": "Can start immediately",
+        "APPOINTMENT_1": "Next Tuesday",
+        "APPOINTMENT_2": "Next Thursday", 
+        "APPOINTMENT_3": "Monday next week"
       }
     },
   },
   {
     id: "4",
     client: clients[3],
-    subject: "Großbestellung Barcode-Scanner",
-    text: "Sehr geehrte Damen und Herren,\n\nwir möchten 50 Barcode-Scanner bestellen. Bitte senden Sie uns ein Angebot inkl. Lieferzeit.\n\nMit freundlichen Grüßen\nLabyPreise AG",
+    subject: "Bulk Order Barcode Scanners",
+    text: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nLabyPreise AG",
     date: "2024-05-07T16:45:00Z",
     status: "new",
     priority: "high",
@@ -371,17 +371,17 @@ export const salesRequests: SalesRequest[] = [
       messages: [
         {
           id: "msg-4",
-          from: "kontakt@labypreise-ag.com",
+          from: "contact@labypreise-ag.com",
           to: "sales@company.com",
           date: "2024-05-07T16:45:00Z",
-          content: "Sehr geehrte Damen und Herren,\n\nwir möchten 50 Barcode-Scanner bestellen. Bitte senden Sie uns ein Angebot inkl. Lieferzeit.\n\nMit freundlichen Grüßen\nLabyPreise AG"
+          content: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nLabyPreise AG"
         }
       ]
     },
     aiAnalysis: {
-      type: "Großbestellung",
+      type: "Bulk Order",
       confidence: 0.95,
-      marketAnalysis: "LabyPreise AG ist ein Premium-Großhandelskunde mit ausgezeichneter Zahlungshistorie. Barcode-Scanner haben stabile Nachfrage im Handelssektor.",
+      marketAnalysis: "LabyPreise AG is a premium wholesale customer with excellent payment history. Barcode scanners have stable demand in the retail sector.",
       matchingProducts: [products[3]],
       suggestedPrice: 4450,
       marketData: {
@@ -392,22 +392,22 @@ export const salesRequests: SalesRequest[] = [
           { competitor: "ScanTech", price: 92 },
           { competitor: "BarcodePoint", price: 88 }
         ],
-        recommendation: "Großmengenrabatt möglich - sehr attraktiver Deal."
+        recommendation: "Volume discount possible - very attractive deal."
       },
       riskAssessment: {
         score: 95,
-        factors: ["Premium-Kunde", "Große Bestellmenge", "Exzellente Historie"]
+        factors: ["Premium customer", "Large order quantity", "Excellent history"]
       },
-      suggestedResponse: "Sehr geehrte Damen und Herren,\n\nvielen Dank für Ihre Großbestellung von 50 Barcode-Scannern.\n\n**Angebot:**\n- 50x Barcode Scanner Pro\n- Einzelpreis: [EINZELPREIS] €\n- Mengenrabatt: [RABATT]%\n- Gesamtpreis: [GESAMTPREIS] € (netto)\n\n**Konditionen:**\n- Lieferzeit: [LIEFERZEIT]\n- Zahlungsziel: [ZAHLUNGSZIEL]\n- Garantie: [GARANTIE]\n\n**Zusatzleistungen:**\n- [ZUSATZ_1]\n- [ZUSATZ_2]\n\nWir freuen uns auf Ihre Bestellung.\n\nMit freundlichen Grüßen\nIhr Sales Team",
+      suggestedResponse: "Dear Sir or Madam,\n\nThank you for your bulk order of 50 barcode scanners.\n\n**Quote:**\n- 50x Barcode Scanner Pro\n- Unit price: [UNIT_PRICE] $\n- Volume discount: [DISCOUNT]%\n- Total price: [TOTAL_PRICE] $ (net)\n\n**Terms:**\n- Delivery time: [DELIVERY_TIME]\n- Payment terms: [PAYMENT_TERMS]\n- Warranty: [WARRANTY]\n\n**Additional Services:**\n- [EXTRA_1]\n- [EXTRA_2]\n\nWe look forward to your order.\n\nBest regards\nYour Sales Team",
       placeholders: {
-        "EINZELPREIS": "89",
-        "RABATT": "15",
-        "GESAMTPREIS": "3.782,50",
-        "LIEFERZEIT": "1-2 Werktage",
-        "ZAHLUNGSZIEL": "30 Tage netto",
-        "GARANTIE": "2 Jahre Garantie",
-        "ZUSATZ_1": "Kostenlose Konfiguration",
-        "ZUSATZ_2": "Gratis Ersatzteile für 1 Jahr"
+        "UNIT_PRICE": "89",
+        "DISCOUNT": "15",
+        "TOTAL_PRICE": "3,782.50",
+        "DELIVERY_TIME": "1-2 business days",
+        "PAYMENT_TERMS": "30 days net",
+        "WARRANTY": "2-year warranty",
+        "EXTRA_1": "Free configuration",
+        "EXTRA_2": "Free spare parts for 1 year"
       }
     },
   },
@@ -436,11 +436,11 @@ export const mails: Mail[] = salesRequests.map(request => ({
   read: request.status !== "new",
   labels: [
     request.aiAnalysis.type,
-    request.priority === "high" ? "Wichtig" : request.priority === "medium" ? "Normal" : "Niedrig",
-    ...(request.aiAnalysis.confidence > 0.9 ? ["KI-Sicher"] : []),
+    request.priority === "high" ? "Important" : request.priority === "medium" ? "Normal" : "Low",
+    ...(request.aiAnalysis.confidence > 0.9 ? ["AI-Confident"] : []),
     ...(request.client.riskScore < 10 ? ["Premium"] : [])
   ],
   salesRequest: request
 }))
 
-// Accounts werden in der page.tsx erstellt, da JSX in .ts Dateien nicht funktioniert 
+// Accounts are created in page.tsx since JSX doesn't work in .ts files

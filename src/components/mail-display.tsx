@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 import { Mail } from "../data/sales-data"
 import { format } from "date-fns"
-import { de } from "date-fns/locale"
+import { enUS } from "date-fns/locale"
 import { ArrowLeft, Reply, Forward, Archive, Trash2 } from "lucide-react"
 import { useEffect, useState } from "react"
 
@@ -25,9 +25,9 @@ export function MailDisplay({ mail, onBack }: MailDisplayProps) {
     return (
       <div className="flex h-full items-center justify-center">
         <div className="text-center">
-          <h3 className="text-lg font-semibold">Keine E-Mail ausgewählt</h3>
+          <h3 className="text-lg font-semibold">No email selected</h3>
           <p className="text-sm text-muted-foreground">
-            Wähle eine E-Mail aus der Liste aus, um sie zu lesen.
+            Select an email from the list to read it.
           </p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export function MailDisplay({ mail, onBack }: MailDisplayProps) {
         <div className="flex-1">
           <h2 className="text-lg font-semibold">{mail.subject}</h2>
           <p className="text-sm text-muted-foreground">
-            Von: {mail.name} <{mail.email}>
+            From: {mail.name} <{mail.email}>
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -65,8 +65,8 @@ export function MailDisplay({ mail, onBack }: MailDisplayProps) {
         <div className="mb-4">
           <p className="text-sm text-muted-foreground">
             {mounted
-              ? format(new Date(mail.date), "EEEE, d. MMMM yyyy 'um' HH:mm", {
-                  locale: de,
+              ? format(new Date(mail.date), "EEEE, MMMM d, yyyy 'at' HH:mm", {
+                  locale: enUS,
                 })
               : ""}
           </p>
