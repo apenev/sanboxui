@@ -46,7 +46,7 @@ export interface MarketData {
 }
 
 export interface AIAnalysis {
-  type: "Product Request" | "Price Inquiry" | "Consultation" | "Bulk Order" | "Support" | "Used Equipment Sale"
+  type: "Product Request" | "Price Inquiry" | "Consultation" | "Bulk Order" | "Support" | "Used Equipment Sale" | "Technical Inquiry"
   confidence: number
   marketAnalysis: string
   matchingProducts: Product[]
@@ -210,6 +210,32 @@ export const products: Product[] = [{
     speed: "High speed",
     ports: ["USB", "Bluetooth"],
     features: ["1D/2D", "Waterproof"],
+  }
+},
+{
+  id: "5",
+  name: "1G SFP Module - Copper",
+  category: "Network Hardware",
+  price: 45,
+  stock: 120,
+  deliveryTime: "In stock",
+  specs: {
+    speed: "1 Gbps",
+    ports: ["RJ45"],
+    features: ["Copper", "Compatible with C9200L"],
+  }
+},
+{
+  id: "6",
+  name: "1G SFP Module - Fiber",
+  category: "Network Hardware", 
+  price: 65,
+  stock: 85,
+  deliveryTime: "In stock",
+  specs: {
+    speed: "1 Gbps",
+    ports: ["LC Fiber"],
+    features: ["Single-mode", "Compatible with C9200L"],
   }
 }
 ]
@@ -408,6 +434,46 @@ export const salesRequests: SalesRequest[] = [
         "WARRANTY": "2-year warranty",
         "EXTRA_1": "Free configuration",
         "EXTRA_2": "Free spare parts for 1 year"
+      }
+    },
+  },
+  {
+    id: "5",
+    client: clients[4],
+    subject: "SFP Module Compatibility Question",
+    text: "Hello,\n\nI have 2x C9200L-24P-4G-A and I need suitable SFP modules that are 10G, what modules can you offer?\n\nBest regards\nNetSecure Consulting",
+    date: "2024-01-16T14:20:00Z",
+    status: "new",
+    priority: "medium",
+    thread: {
+      id: "thread-5",
+      messages: [
+        {
+          id: "msg-5",
+          from: "procurement@netsecure.de",
+          to: "sales@company.com",
+          date: "2024-01-16T14:20:00Z",
+          content: "Hello,\n\nI have 2x C9200L-24P-4G-A and I need suitable SFP modules that are 10G, what modules can you offer?\n\nBest regards\nNetSecure Consulting"
+        }
+      ]
+    },
+    aiAnalysis: {
+      type: "Technical Inquiry",
+      confidence: 0.96,
+      marketAnalysis: "NetSecure Consulting is a cybersecurity company with good technical knowledge. This is a technical compatibility question that requires accurate product information.",
+      matchingProducts: [products[4], products[5]],
+      riskAssessment: {
+        score: 82,
+        factors: ["Established customer", "Technical inquiry", "Good payment history"]
+      },
+      suggestedResponse: "Hello NetSecure Consulting,\n\nThank you for your inquiry about SFP modules for your Cisco Catalyst switches.\n\n**Important Technical Information:**\nBased on the information provided, the Cisco Catalyst 9200L-24P-4G-A switch has 4 fixed 1G SFP uplink ports and only supports 1G SFP modules for these uplink ports. It does not support 10G SFP modules. Therefore, you cannot use 10G SFP modules with this switch model. Only 1G SFP modules are suitable and supported for the uplink ports on the C9200L-24P-4G-A.\n\n**Available 1G SFP Modules:**\n- [COPPER_MODULE]: [COPPER_PRICE] $ - [COPPER_SPECS]\n- [FIBER_MODULE]: [FIBER_PRICE] $ - [FIBER_SPECS]\n\n**Alternative Solutions:**\nIf you require 10G connectivity, you would need to consider upgrading to a switch model that supports 10G SFP+ modules, such as the Catalyst 9200L series with 10G uplinks.\n\nPlease let us know if you need assistance with compatible 1G modules or information about 10G-capable switches.\n\nBest regards\nYour Technical Sales Team",
+      placeholders: {
+        "COPPER_MODULE": "1G SFP Module - Copper",
+        "COPPER_PRICE": "45",
+        "COPPER_SPECS": "RJ45, Compatible with C9200L",
+        "FIBER_MODULE": "1G SFP Module - Fiber",
+        "FIBER_PRICE": "65", 
+        "FIBER_SPECS": "LC Fiber, Single-mode, Compatible with C9200L"
       }
     },
   },
