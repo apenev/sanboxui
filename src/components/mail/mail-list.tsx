@@ -25,6 +25,12 @@ interface MailListProps {
 }
 
 export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const handleSelectMail = (mailId: string) => {
     onSelectMail(mailId)
   }
@@ -57,10 +63,10 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
                       : "text-muted-foreground"
                   )}
                 >
-                  {formatDistanceToNow(new Date(item.date), {
+                  {mounted ? formatDistanceToNow(new Date(item.date), {
                     addSuffix: true,
                     locale: enUS,
-                  })}
+                  }) : new Date(item.date).toLocaleDateString()}
                 </div>
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
