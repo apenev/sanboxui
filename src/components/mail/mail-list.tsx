@@ -66,7 +66,7 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
                   {mounted ? formatDistanceToNow(new Date(item.date), {
                     addSuffix: true,
                     locale: enUS,
-                  }) : new Date(item.date).toLocaleDateString()}
+                  }) : item.date}
                 </div>
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
