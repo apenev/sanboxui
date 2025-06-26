@@ -237,6 +237,19 @@ export const products: Product[] = [{
     ports: ["LC Fiber"],
     features: ["Single-mode", "Compatible with C9200L"],
   }
+},
+{
+  id: "7",
+  name: "Cisco Catalyst 2960X-48TS-L",
+  category: "Network Switches",
+  price: 2850,
+  stock: 2,
+  deliveryTime: "In stock (2 units), 5 business days for additional units",
+  specs: {
+    speed: "48x 1G ports",
+    ports: ["48x RJ45", "4x SFP+"],
+    features: ["Layer 2", "PoE+", "Stackable"],
+  }
 }
 ]
   
@@ -474,6 +487,63 @@ export const salesRequests: SalesRequest[] = [
         "FIBER_MODULE": "1G SFP Module - Fiber",
         "FIBER_PRICE": "65", 
         "FIBER_SPECS": "LC Fiber, Single-mode, Compatible with C9200L"
+      }
+    },
+  },
+  {
+    id: "6",
+    client: clients[1],
+    subject: "Quote Request for Cisco 2960X Switch",
+    text: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nDataCore Networks AG",
+    date: "2024-01-17T10:45:00Z",
+    status: "new",
+    priority: "high",
+    thread: {
+      id: "thread-6",
+      messages: [
+        {
+          id: "msg-6",
+          from: "purchasing@datacore-networks.com",
+          to: "sales@company.com",
+          date: "2024-01-17T10:45:00Z",
+          content: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nDataCore Networks AG"
+        }
+      ]
+    },
+    aiAnalysis: {
+      type: "Product Request",
+      confidence: 0.94,
+      marketAnalysis: "DataCore Networks AG is a premium telecommunications customer with excellent payment history and high-value orders. Cisco switches are in high demand in the enterprise market.",
+      matchingProducts: [products[6]],
+      suggestedPrice: 11400,
+      marketData: {
+        averagePrice: 2900,
+        priceRange: { min: 2700, max: 3200 },
+        trend: "stable",
+        competitorPrices: [
+          { competitor: "NetworkPro", price: 2920 },
+          { competitor: "CiscoPartner", price: 2880 }
+        ],
+        recommendation: "Competitive pricing for premium customer with volume potential."
+      },
+      riskAssessment: {
+        score: 95,
+        factors: ["Premium customer", "Excellent payment history", "High-value orders", "Telecommunications industry"]
+      },
+      suggestedResponse: "Hello DataCore Networks AG,\n\nThank you for your inquiry about the Cisco Catalyst 2960X-48TS-L switch.\n\n**Stock Status & Quote:**\nYes, we have it on stock but we have just 2 units available. We could provide 2 more within 5 business days.\n\n**Pricing for 4 units:**\n- Unit price: [UNIT_PRICE] $\n- Total for 4 units: [TOTAL_PRICE] $ (net)\n- Volume discount: [DISCOUNT]% applied\n\n**Delivery Schedule:**\n- [IMMEDIATE_STOCK] units: [IMMEDIATE_DELIVERY]\n- [ADDITIONAL_STOCK] units: [ADDITIONAL_DELIVERY]\n\n**Product Specifications:**\n- [PORTS]\n- [FEATURES]\n- [WARRANTY]\n\n**Additional Services:**\n- [SERVICE_1]\n- [SERVICE_2]\n\nGiven your status as a premium customer, we can offer expedited delivery for the additional units if needed.\n\nBest regards\nYour Sales Team",
+      placeholders: {
+        "UNIT_PRICE": "2,850",
+        "TOTAL_PRICE": "10,830",
+        "DISCOUNT": "5",
+        "IMMEDIATE_STOCK": "2",
+        "IMMEDIATE_DELIVERY": "Available immediately",
+        "ADDITIONAL_STOCK": "2",
+        "ADDITIONAL_DELIVERY": "5 business days",
+        "PORTS": "48x 1G RJ45 ports + 4x SFP+ uplinks",
+        "FEATURES": "Layer 2 switching, PoE+, Stackable",
+        "WARRANTY": "Cisco limited lifetime warranty",
+        "SERVICE_1": "Free configuration assistance",
+        "SERVICE_2": "Priority technical support"
       }
     },
   },
