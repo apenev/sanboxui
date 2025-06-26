@@ -17,6 +17,7 @@ import {
   ShoppingCart,
   Trash2,
   Users2,
+  Settings,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -129,6 +130,7 @@ export function Mail({
                 label: "128",
                 icon: Inbox,
                 variant: "default",
+                href: "/"
               },
               {
                 title: "Drafts",
@@ -165,6 +167,13 @@ export function Mail({
                 label: "342",
                 icon: AlertCircle,
                 variant: "ghost",
+              },
+              {
+                title: "Admin",
+                label: "",
+                icon: Settings,
+                variant: "ghost",
+                href: "/admin"
               }
             ]}
           />
