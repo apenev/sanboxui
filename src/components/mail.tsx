@@ -20,7 +20,7 @@ import { MailList } from "./mail/mail-list"
 import { Nav } from "./nav"
 import { type Mail } from "../data/sales-data"
 import { useMail } from "./mail/use-mail"
-import { LucideIcon } from "lucide-react"
+import { DivideIcon as LucideIcon } from "lucide-react"
 
 // Dynamically import framer-motion components to prevent SSR hydration mismatch
 const motion = dynamic(() => import("framer-motion").then(mod => ({ default: mod.motion })), { ssr: false })
