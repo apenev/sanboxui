@@ -6,13 +6,13 @@ import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { Input } from "ui/input"
+import { Input } from "@/components/ui/input"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "ui/resizable"
-import { Separator } from "ui/separator"
+} from "@/components/ui/resizable"
+import { Separator } from "@/components/ui/separator"
 import { TooltipProvider } from "../ui/tooltip"
 import { AccountSwitcher } from "./account-switcher"
 import { MailDisplay } from "./mail-display"
@@ -110,4 +110,4 @@ export function Mail({
       </ResizablePanelGroup>
     </TooltipProvider>
   )
-} 
+}
