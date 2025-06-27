@@ -21,6 +21,9 @@ import { Nav } from "./nav"
 import { type Mail } from "../data/sales-data"
 import { useMail } from "./mail/use-mail"
 
+const mainNavLinks = []
+const secondaryNavLinks = []
+
 interface MailProps {
   accounts: {
     label: string
@@ -74,7 +77,7 @@ export function Mail({
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.2 }}
               >
-                <Nav items={[]} />
+                <Nav links={mainNavLinks} isCollapsed={isCollapsed} />
               </motion.div>
             )}
           </AnimatePresence>
