@@ -31,7 +31,7 @@ import { MailList } from "./mail-list"
 import { MailDisplay } from "./mail-display"
 import { useMail } from "./use-mail"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { Mail } from "@/data/sales-data"
+import type { Mail } from "@/data/sales-data"
 
 interface MailProps {
   accounts: {
