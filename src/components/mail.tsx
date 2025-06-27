@@ -13,7 +13,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
 import { Separator } from "@/components/ui/separator"
-import { TooltipProvider } from "../ui/tooltip"
+import { TooltipProvider } from "@/components/ui/tooltip"
 import { AccountSwitcher } from "./account-switcher"
 import { MailDisplay } from "./mail-display"
 import { MailList } from "./mail-list"
