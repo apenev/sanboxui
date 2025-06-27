@@ -15,11 +15,11 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { AccountSwitcher } from "./account-switcher"
-import { MailDisplay } from "./mail-display"
-import { MailList } from "./mail-list"
+import { MailDisplay } from "./mail/mail-display"
+import { MailList } from "./mail/mail-list"
 import { MailNav } from "./nav"
-import { type Mail } from "../../data/sales-data"
-import { useMail } from "../../hooks/use-mail"
+import { type Mail } from "../data/sales-data"
+import { useMail } from "./mail/use-mail"
 
 interface MailProps {
   accounts: {
