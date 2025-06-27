@@ -17,7 +17,7 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 import { AccountSwitcher } from "./account-switcher"
 import { MailDisplay } from "./mail/mail-display"
 import { MailList } from "./mail/mail-list"
-import { MailNav } from "./nav"
+import { Nav } from "./nav"
 import { type Mail } from "../data/sales-data"
 import { useMail } from "./mail/use-mail"
 
@@ -74,7 +74,7 @@ export function Mail({
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.2 }}
               >
-                <MailNav items={[]} />
+                <Nav items={[]} />
               </motion.div>
             )}
           </AnimatePresence>
