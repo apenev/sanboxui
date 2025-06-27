@@ -31,6 +31,7 @@ import { MailList } from "./mail-list"
 import { MailDisplay } from "./mail-display"
 import { useMail } from "./use-mail"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { Mail } from "@/data/sales-data"
 
 interface MailProps {
   accounts: {
@@ -38,7 +39,7 @@ interface MailProps {
     email: string
     icon: React.ReactNode
   }[]
-  mails: any[]
+  mails: Mail[]
   defaultLayout?: number[]
   defaultCollapsed?: boolean
   navCollapsedSize?: number

@@ -22,19 +22,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Progress } from "@/components/ui/progress"
 import { Input } from "@/components/ui/input"
-import { SalesRequest } from "@/data/sales-data"
-
-interface Mail {
-  id: string
-  name: string
-  email: string
-  subject: string
-  text: string
-  date: string
-  read: boolean
-  labels: string[]
-  salesRequest?: SalesRequest
-}
+import { Mail, SalesRequest } from "@/data/sales-data"
 
 interface MailDisplayProps {
   mail: Mail | null

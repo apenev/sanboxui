@@ -6,17 +6,7 @@ import { enUS } from "date-fns/locale"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
-
-export interface Mail {
-  id: string
-  name: string
-  email: string
-  subject: string
-  text: string
-  date: string
-  read: boolean
-  labels: string[]
-}
+import { Mail } from "@/data/sales-data"
 
 interface MailListProps {
   items: Mail[]
