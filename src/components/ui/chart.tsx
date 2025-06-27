@@ -120,6 +120,7 @@ function ChartTooltipContent({
   labelKey,
 }: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
   React.ComponentProps<"div"> & {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     payload?: Array<any>
     hideLabel?: boolean
     hideIndicator?: boolean
