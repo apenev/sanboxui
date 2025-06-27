@@ -20,6 +20,7 @@ import { MailList } from "./mail/mail-list"
 import { Nav } from "./nav"
 import { type Mail } from "../data/sales-data"
 import { useMail } from "./mail/use-mail"
+import { LucideIcon } from "lucide-react"
 
 // Dynamically import framer-motion components to prevent SSR hydration mismatch
 const motion = dynamic(() => import("framer-motion").then(mod => ({ default: mod.motion })), { ssr: false })
@@ -28,7 +29,7 @@ const AnimatePresence = dynamic(() => import("framer-motion").then(mod => ({ def
 interface NavLink {
   title: string
   label?: string
-  icon: React.ComponentType<any>
+  icon: LucideIcon
   variant: "default" | "ghost"
   href?: string
 }
