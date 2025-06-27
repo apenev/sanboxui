@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { DivideIcon as LucideIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -16,7 +15,7 @@ interface NavProps {
   links: {
     title: string
     label?: string
-    icon: LucideIcon
+    icon: React.ComponentType<any>
     variant: "default" | "ghost"
     href?: string
   }[]

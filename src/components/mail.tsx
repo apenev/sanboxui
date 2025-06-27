@@ -4,7 +4,7 @@
 import { useTheme } from "next-themes"
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, DivideIcon as LucideIcon } from "lucide-react"
+import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import {
@@ -24,7 +24,7 @@ import { useMail } from "./mail/use-mail"
 interface NavLink {
   title: string
   label?: string
-  icon: LucideIcon
+  icon: React.ComponentType<any>
   variant: "default" | "ghost"
   href?: string
 }
