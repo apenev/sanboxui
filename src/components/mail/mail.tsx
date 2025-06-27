@@ -118,6 +118,7 @@ export function Mail({
               width={isCollapsed ? 30 : 150} 
               height={30} 
               className={`object-contain ${!isCollapsed ? 'ml-1' : ''}`}
+              suppressHydrationWarning={true}
             />
           </div>
           <Separator />
