@@ -86,6 +86,12 @@ export function Mail({
               true
             )}`
           }}
+          onExpand={() => {
+            setIsCollapsed(false)
+            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
+              false
+            )}`
+          }}
           onResize={() => {
             setIsCollapsed(false)
             document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
@@ -122,61 +128,65 @@ export function Mail({
             )}
           </div>
           <Separator />
-          <Nav
-            isCollapsed={isCollapsed}
-            links={[
-              {
-                title: "Inbox",
-                label: "128",
-                icon: Inbox,
-                variant: "default",
-                href: "/"
-              },
-              {
-                title: "Drafts",
-                label: "9",
-                icon: File,
-                variant: "ghost",
-              },
-              {
-                title: "Sent",
-                label: "",
-                icon: Send,
-                variant: "ghost",
-              },
-              {
-                title: "Trash",
-                label: "",
-                icon: Trash2,
-                variant: "ghost",
-              },
-            ]}
-          />
+          {mounted && (
+            <Nav
+              isCollapsed={isCollapsed}
+              links={[
+                {
+                  title: "Inbox",
+                  label: "128",
+                  icon: Inbox,
+                  variant: "default",
+                  href: "/"
+                },
+                {
+                  title: "Drafts",
+                  label: "9",
+                  icon: File,
+                  variant: "ghost",
+                },
+                {
+                  title: "Sent",
+                  label: "",
+                  icon: Send,
+                  variant: "ghost",
+                },
+                {
+                  title: "Trash",
+                  label: "",
+                  icon: Trash2,
+                  variant: "ghost",
+                },
+              ]}
+            />
+          )}
           <Separator />
-          <Nav
-            isCollapsed={isCollapsed}
-            links={[
-              {
-                title: "Sales Requests",
-                label: "972",
-                icon: Users2,
-                variant: "ghost",
-              },
-              {
-                title: "Updates",
-                label: "342",
-                icon: AlertCircle,
-                variant: "ghost",
-              },
-              {
-                title: "Admin",
-                label: "",
-                icon: Settings,
-                variant: "ghost",
-                href: "/admin"
-              }
-            ]}
-          />
+          {mounted && (
+            <Nav
+              isCollapsed={isCollapsed}
+              links={[
+                {
+                  title: "Sales Requests",
+                  label: "972",
+                  icon: Users2,
+                  variant: "ghost",
+                },
+                {
+                  title: "Updates",
+                  label: "342",
+                  icon: AlertCircle,
+                  variant: "ghost",
+                },
+                {
+                  title: "Admin",
+                  label: "",
+                  icon: Settings,
+                  variant: "ghost",
+                  href: "/admin"
+                }
+              ]}
+            />
+          )}
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={20}>
