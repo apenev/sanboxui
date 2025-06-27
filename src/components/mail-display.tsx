@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Mail } from "@/hooks/use-mail"
+import { Mail } from "@/data/sales-data"
 
 interface MailDisplayProps {
   mail: Mail | null
