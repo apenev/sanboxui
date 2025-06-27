@@ -4,7 +4,7 @@
 import { useTheme } from "next-themes"
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search } from "lucide-react"
+import { Search, LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import {
@@ -21,8 +21,16 @@ import { Nav } from "./nav"
 import { type Mail } from "../data/sales-data"
 import { useMail } from "./mail/use-mail"
 
-const mainNavLinks = []
-const secondaryNavLinks = []
+interface NavLink {
+  title: string
+  label?: string
+  icon: LucideIcon
+  variant: "default" | "ghost"
+  href?: string
+}
+
+const mainNavLinks: NavLink[] = []
+const secondaryNavLinks: NavLink[] = []
 
 interface MailProps {
   accounts: {
