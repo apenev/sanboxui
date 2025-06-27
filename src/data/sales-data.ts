@@ -162,55 +162,55 @@ export const clients: Client[] = [{
 
 export const products: Product[] = [{
   id: "1",
-  name: "Cloud Migration Suite",
-  category: "Cloud",
-  price: 8999,
-  stock: 15,
+  name: "Cisco Catalyst 9300-24P",
+  category: "Network Switches",
+  price: 4850,
+  stock: 8,
   deliveryTime: "2-3 business days",
   specs: {
-    speed: "Quick start",
-    ports: ["API", "Web"],
-    features: ["Automation", "Monitoring"],
+    speed: "24x 1G + 4x 10G SFP+",
+    ports: ["24x RJ45", "4x SFP+"],
+    features: ["PoE+", "Modular", "Stacking", "Redundant PSU"],
   },
 },
 {
   id: "2",
-  name: "POS Terminal Pro",
-  category: "POS Systems",
-  price: 1290,
-  stock: 45,
-  deliveryTime: "In stock",
+  name: "Cisco Catalyst 9300-24U",
+  category: "Network Switches",
+  price: 5650,
+  stock: 5,
+  deliveryTime: "2-3 business days",
   specs: {
-    speed: "Ready to use",
-    ports: ["USB", "LAN"],
-    features: ["Touchscreen", "Cloud backup"],
+    speed: "24x 1G + 4x 10G SFP+",
+    ports: ["24x RJ45", "4x SFP+"],
+    features: ["UPOE", "Modular", "Stacking", "Redundant PSU"],
   },
 },
 {
   id: "3",
-  name: "Security Audit Basic",
-  category: "Security",
-  price: 1990,
-  stock: 0,
+  name: "Cisco Catalyst 3850-24XU",
+  category: "Network Switches",
+  price: 6200,
+  stock: 3,
   deliveryTime: "1 week",
   specs: {
-    speed: "1 week",
-    ports: ["Remote"],
-    features: ["Report", "Recommendations"],
+    speed: "24x 1G + 2x 10G SFP+",
+    ports: ["24x RJ45", "2x SFP+"],
+    features: ["UPOE", "Modular", "Stacking", "Redundant PSU"],
   },
 },
 {
   id: "4",
-  name: "Barcode Scanner Pro",
-  category: "Hardware",
-  price: 89,
-  stock: 250,
-  deliveryTime: "1-2 business days",
+  name: "Cisco Catalyst 9200L-24PXG",
+  category: "Network Switches",
+  price: 3850,
+  stock: 12,
+  deliveryTime: "In stock",
   specs: {
-    speed: "High speed",
-    ports: ["USB", "Bluetooth"],
-    features: ["1D/2D", "Waterproof"],
-  }
+    speed: "24x 1G + 4x 10G SFP+",
+    ports: ["24x RJ45", "4x SFP+"],
+    features: ["PoE+", "Fixed PSU", "No Stacking"],
+  },
 },
 {
   id: "5",
@@ -258,8 +258,8 @@ export const salesRequests: SalesRequest[] = [
   {
     id: "1",
     client: clients[0],
-    subject: "Quote for Cloud Migration",
-    text: "Dear Team,\n\nWe would like to migrate our infrastructure to the cloud. Please send us a quote for the migration and ongoing support.\n\nBest regards\nPenev Inc",
+    subject: "Network Switch Requirements - 24 Port with 10G Uplinks",
+    text: "Please give me a comprehensive list of network switches that will meet the following criteria:\n- 24 1G RJ45 ports\n- at least 2x 10G uplinks ( SFP+ ), more uplinks is better!\n- PoE - consider that all kinds of POE are welcome, but give preference to UPOE\n- modular design is preferred - modularity in power supplies and fans\n- 2 power supplies are needed for redundancy\n- stacking as an option would be nice, but please list also models that do not have stacking capabalities\n- Brand : Cisco \n\nPlease list ONLY the SKUs, Please dont forget to include also 9300",
     date: "2024-05-10T09:00:00Z",
     status: "new",
     priority: "high",
@@ -268,39 +268,44 @@ export const salesRequests: SalesRequest[] = [
       messages: [
         {
           id: "msg-1",
-          from: "contact@penevinc.com",
+          from: "procurement@techflow-solutions.de",
           to: "sales@company.com",
           date: "2024-05-10T09:00:00Z",
-          content: "Dear Team,\n\nWe would like to migrate our infrastructure to the cloud. Please send us a quote for the migration and ongoing support.\n\nBest regards\nPenev Inc"
+          content: "Please give me a comprehensive list of network switches that will meet the following criteria:\n- 24 1G RJ45 ports\n- at least 2x 10G uplinks ( SFP+ ), more uplinks is better!\n- PoE - consider that all kinds of POE are welcome, but give preference to UPOE\n- modular design is preferred - modularity in power supplies and fans\n- 2 power supplies are needed for redundancy\n- stacking as an option would be nice, but please list also models that do not have stacking capabalities\n- Brand : Cisco \n\nPlease list ONLY the SKUs, Please dont forget to include also 9300"
         }
       ]
     },
     aiAnalysis: {
-      type: "RFQ ( Request for Quote )",
-      confidence: 0.93,
-      marketAnalysis: "Penev Inc is an established IT company with stable growth strategy. The cloud migration market shows strong demand with 15% annual growth.",
-      matchingProducts: [products[0]],
-      suggestedPrice: 8999,
-      marketData: {
-        averagePrice: 9500,
-        priceRange: { min: 7500, max: 12000 },
-        trend: "rising",
-        competitorPrices: [
-          { competitor: "CloudTech Solutions", price: 9200 },
-          { competitor: "MigrationPro", price: 8750 }
-        ],
-        recommendation: "Our price is 5% below market average - very competitive."
-      },
+      type: "Technical question",
+      confidence: 0.7,
+      marketAnalysis: "TechFlow Solutions GmbH is requesting detailed technical specifications for Cisco network switches. This appears to be a technical evaluation phase before a potential purchase. The enterprise networking market shows strong demand for modular, high-performance switches with redundancy features.",
+      matchingProducts: [products[0], products[1], products[2], products[3]],
       riskAssessment: {
         score: 85,
-        factors: ["Strong payment history", "Growing industry", "Long-term partnership"]
+        factors: ["Strong payment history", "Growing industry", "Long-term partnership", "Technical expertise"]
       },
-      suggestedResponse: "Dear Penev Inc Team,\n\nThank you for your interest in our Cloud Migration Suite. Based on your inquiry, we're happy to create a customized quote for you.\n\n**Quote:**\n- Cloud Migration Suite: [PRICE] $\n- Delivery time: [DELIVERY_TIME]\n- Support: [SUPPORT_OPTIONS]\n\nDue to your long-standing partnership, we can offer you a special price of [SPECIAL_PRICE] $.\n\nPlease don't hesitate to contact us with any questions.\n\nBest regards\nYour Sales Team",
+      suggestedResponse: "Based strictly on the provided data, here is a comprehensive list of Cisco network switches that meet your criteria:\n\n**Criteria Recap:**\n- 24 x 1G RJ45 ports\n- At least 2x 10G SFP+ uplinks (more uplinks is better)\n- PoE (all types considered, UPOE preferred)\n- Modular design preferred (modular power supplies and fans)\n- 2 power supplies for redundancy\n- Stacking is a plus (but not required)\n- Brand: Cisco\n\n**SKUs that meet your requirements:**\n\n1. **[SKU_1]** - [DESCRIPTION_1]\n2. **[SKU_2]** - [DESCRIPTION_2]\n3. **[SKU_3]** - [DESCRIPTION_3]\n4. **[SKU_4]** - [DESCRIPTION_4]\n5. **[SKU_5]** - [DESCRIPTION_5]\n6. **[SKU_6]** - [DESCRIPTION_6]\n7. **[SKU_7]** - [DESCRIPTION_7]\n8. **[SKU_8]** - [DESCRIPTION_8]\n9. **[SKU_9]** - [DESCRIPTION_9]\n10. **[SKU_10]** - [DESCRIPTION_10]\n\n**Notes:**\n- All listed models have 24 RJ45 ports and support PoE (with some supporting UPOE).\n- All have at least 2x 10G SFP+ uplinks (some have more, or modular uplink options).\n- All support redundant, modular power supplies (2 slots).\n- Most support stacking capabilities.\n- All are Cisco branded.\n- Preference for UPOE models: Look for SKUs with \"U\" or \"XU\" designations.\n\n**9300 Series models are included as requested.**\n\nWould you like detailed specifications, pricing, or availability information for any of these models?\n\nBest regards\nYour Technical Sales Team",
       placeholders: {
-        "PRICE": "8,999",
-        "DELIVERY_TIME": "2-3 business days",
-        "SUPPORT_OPTIONS": "24/7 Premium Support",
-        "SPECIAL_PRICE": "8,499"
+        "SKU_1": "WS-C3850-24XU",
+        "DESCRIPTION_1": "24 ports, 2x 10G SFP+, UPOE, Modular, Stacking",
+        "SKU_2": "WS-C3850-24XU-L",
+        "DESCRIPTION_2": "24 ports, 2x 10G SFP+, UPOE, Modular, Stacking",
+        "SKU_3": "WS-C3850-24XU-S",
+        "DESCRIPTION_3": "24 ports, 2x 10G SFP+, UPOE, Modular, Stacking",
+        "SKU_4": "WS-C3850-24XU-E",
+        "DESCRIPTION_4": "24 ports, 2x 10G SFP+, UPOE, Modular, Stacking",
+        "SKU_5": "C9300-24P",
+        "DESCRIPTION_5": "24 ports, 4x 10G SFP+, PoE+, Modular, Stacking",
+        "SKU_6": "C9300-24U",
+        "DESCRIPTION_6": "24 ports, 4x 10G SFP+, UPOE, Modular, Stacking",
+        "SKU_7": "C9300-24UX",
+        "DESCRIPTION_7": "24 ports, 8x 10G SFP+, UPOE, Modular, Stacking",
+        "SKU_8": "C9200L-24PXG-2Y",
+        "DESCRIPTION_8": "24 ports, 4x 10G SFP+, PoE+, Fixed PSU, No Stacking",
+        "SKU_9": "C9200L-24PXG-4X-E",
+        "DESCRIPTION_9": "24 ports, 4x 10G SFP+, PoE+, Fixed PSU, No Stacking",
+        "SKU_10": "C9200L-24PXG-4X-A",
+        "DESCRIPTION_10": "24 ports, 4x 10G SFP+, PoE+, Fixed PSU, No Stacking"
       }
     },
   },
