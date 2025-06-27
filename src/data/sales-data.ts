@@ -46,7 +46,7 @@ export interface MarketData {
 }
 
 export interface AIAnalysis {
-  type: "Product Request" | "Price Inquiry" | "Consultation" | "Bulk Order" | "Support" | "Used Equipment Sale" | "Technical Inquiry"
+  type: "RFQ ( Request for Quote )" | "Technical question" | "Consultation" | "Bulk Order" | "Support" | "Used Equipment Sale" | "WTB ( want to buy )"
   confidence: number
   marketAnalysis: string
   matchingProducts: Product[]
@@ -276,7 +276,7 @@ export const salesRequests: SalesRequest[] = [
       ]
     },
     aiAnalysis: {
-      type: "Product Request",
+      type: "RFQ ( Request for Quote )",
       confidence: 0.93,
       marketAnalysis: "Penev Inc is an established IT company with stable growth strategy. The cloud migration market shows strong demand with 15% annual growth.",
       matchingProducts: [products[0]],
@@ -325,7 +325,7 @@ export const salesRequests: SalesRequest[] = [
       ]
     },
     aiAnalysis: {
-      type: "Price Inquiry",
+      type: "RFQ ( Request for Quote )",
       confidence: 0.88,
       marketAnalysis: "LabyPreise GmbH is an established trading partner with high order volume. POS systems show stable market with good margins.",
       matchingProducts: [products[1]],
@@ -418,7 +418,7 @@ export const salesRequests: SalesRequest[] = [
       ]
     },
     aiAnalysis: {
-      type: "Bulk Order",
+      type: "WTB ( want to buy )",
       confidence: 0.95,
       marketAnalysis: "LabyPreise AG is a premium wholesale customer with excellent payment history. Barcode scanners have stable demand in the retail sector.",
       matchingProducts: [products[3]],
@@ -471,7 +471,7 @@ export const salesRequests: SalesRequest[] = [
       ]
     },
     aiAnalysis: {
-      type: "Technical Inquiry",
+      type: "Technical question",
       confidence: 0.96,
       marketAnalysis: "NetSecure Consulting is a cybersecurity company with good technical knowledge. This is a technical compatibility question that requires accurate product information.",
       matchingProducts: [products[4], products[5]],
@@ -511,7 +511,7 @@ export const salesRequests: SalesRequest[] = [
       ]
     },
     aiAnalysis: {
-      type: "Product Request",
+      type: "RFQ ( Request for Quote )",
       confidence: 0.94,
       marketAnalysis: "DataCore Networks AG is a premium telecommunications customer with excellent payment history and high-value orders. Cisco switches are in high demand in the enterprise market.",
       matchingProducts: [products[6]],
