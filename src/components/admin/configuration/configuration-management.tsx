@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Save, RefreshCw, AlertTriangle, CheckCircle, Settings, Mail, Database, Shield, Bell } from "lucide-react"
+import { Save, RefreshCw, AlertTriangle, Settings, Mail, Database, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -37,10 +37,10 @@ interface ConfigSetting {
   label: string
   description: string
   type: "text" | "number" | "boolean" | "select" | "textarea"
-  value: any
+  value: string | number | boolean
   options?: { label: string; value: string }[]
   required?: boolean
-  validation?: (value: any) => string | null
+  validation?: (value: string | number | boolean) => string | null
 }
 
 const configSections: ConfigSection[] = [
@@ -225,8 +225,8 @@ const configSections: ConfigSection[] = [
 
 export function ConfigurationManagement() {
   const [activeTab, setActiveTab] = React.useState("general")
-  const [settings, setSettings] = React.useState<Record<string, any>>(() => {
-    const initialSettings: Record<string, any> = {}
+  const [settings, setSettings] = React.useState<Record<string, string | number | boolean>>(() => {
+    const initialSettings: Record<string, string | number | boolean> = {}
     configSections.forEach(section => {
       section.settings.forEach(setting => {
         initialSettings[setting.key] = setting.value
@@ -236,7 +236,7 @@ export function ConfigurationManagement() {
   })
   const [hasChanges, setHasChanges] = React.useState(false)
 
-  const updateSetting = (key: string, value: any) => {
+  const updateSetting = (key: string, value: string | number | boolean) => {
     setSettings(prev => ({ ...prev, [key]: value }))
     setHasChanges(true)
   }
@@ -250,7 +250,7 @@ export function ConfigurationManagement() {
 
   const handleReset = () => {
     // Reset to original values
-    const originalSettings: Record<string, any> = {}
+    const originalSettings: Record<string, string | number | boolean> = {}
     configSections.forEach(section => {
       section.settings.forEach(setting => {
         originalSettings[setting.key] = setting.value
@@ -261,13 +261,13 @@ export function ConfigurationManagement() {
   }
 
   const renderSetting = (setting: ConfigSetting) => {
-    const value = settings[setting.key]
+    const value: string | number | boolean = settings[setting.key]
 
     switch (setting.type) {
       case "text":
         return (
           <Input
-            value={value || ""}
+            value={value as string || ""}
             onChange={(e) => updateSetting(setting.key, e.target.value)}
             placeholder={setting.description}
           />
@@ -277,7 +277,7 @@ export function ConfigurationManagement() {
         return (
           <Input
             type="number"
-            value={value || ""}
+            value={value as number || ""}
             onChange={(e) => updateSetting(setting.key, parseInt(e.target.value) || 0)}
             placeholder={setting.description}
           />
@@ -286,14 +286,14 @@ export function ConfigurationManagement() {
       case "boolean":
         return (
           <Switch
-            checked={value || false}
+            checked={value as boolean || false}
             onCheckedChange={(checked) => updateSetting(setting.key, checked)}
           />
         )
       
       case "select":
         return (
-          <Select value={value} onValueChange={(newValue) => updateSetting(setting.key, newValue)}>
+          <Select value={value as string} onValueChange={(newValue) => updateSetting(setting.key, newValue)}>
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
@@ -310,7 +310,7 @@ export function ConfigurationManagement() {
       case "textarea":
         return (
           <Textarea
-            value={value || ""}
+            value={value as string || ""}
             onChange={(e) => updateSetting(setting.key, e.target.value)}
             placeholder={setting.description}
             rows={3}
