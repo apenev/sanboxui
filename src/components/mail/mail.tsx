@@ -54,11 +54,6 @@ export function Mail({
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed)
   const [selectedMail, setSelectedMail] = React.useState<string | null>(null)
   const { theme, systemTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
 
   // Determine current theme
   const currentTheme = theme === 'system' ? systemTheme : theme
@@ -110,83 +105,77 @@ export function Mail({
               isCollapsed ? "h-[52px] justify-center" : "px-2"
             )}
           >
-            {mounted && (
-              <img 
-                src={isCollapsed 
-                  ? (currentTheme === 'dark' 
-                      ? "/images/salescopilotalone-dark.png" 
-                      : "/images/salescopilotalone-light.png")
-                  : (currentTheme === 'dark' 
-                      ? "/images/salescopilot-dark.png" 
-                      : "/images/salescopilot-light.png")
-                }
-                alt="Sales Copilot" 
-                width={isCollapsed ? 30 : 150} 
-                height={30} 
-                className={`object-contain ${!isCollapsed ? 'ml-1' : ''}`}
-              />
-            )}
+            <img 
+              src={isCollapsed 
+                ? (currentTheme === 'dark' 
+                    ? "/images/salescopilotalone-dark.png" 
+                    : "/images/salescopilotalone-light.png")
+                : (currentTheme === 'dark' 
+                    ? "/images/salescopilot-dark.png" 
+                    : "/images/salescopilot-light.png")
+              }
+              alt="Sales Copilot" 
+              width={isCollapsed ? 30 : 150} 
+              height={30} 
+              className={`object-contain ${!isCollapsed ? 'ml-1' : ''}`}
+            />
           </div>
           <Separator />
-          {mounted && (
-            <Nav
-              isCollapsed={isCollapsed}
-              links={[
-                {
-                  title: "Inbox",
-                  label: "128",
-                  icon: Inbox,
-                  variant: "default",
-                  href: "/"
-                },
-                {
-                  title: "Drafts",
-                  label: "9",
-                  icon: File,
-                  variant: "ghost",
-                },
-                {
-                  title: "Sent",
-                  label: "",
-                  icon: Send,
-                  variant: "ghost",
-                },
-                {
-                  title: "Trash",
-                  label: "",
-                  icon: Trash2,
-                  variant: "ghost",
-                },
-              ]}
-            />
-          )}
+          <Nav
+            isCollapsed={isCollapsed}
+            links={[
+              {
+                title: "Inbox",
+                label: "128",
+                icon: Inbox,
+                variant: "default",
+                href: "/"
+              },
+              {
+                title: "Drafts",
+                label: "9",
+                icon: File,
+                variant: "ghost",
+              },
+              {
+                title: "Sent",
+                label: "",
+                icon: Send,
+                variant: "ghost",
+              },
+              {
+                title: "Trash",
+                label: "",
+                icon: Trash2,
+                variant: "ghost",
+              },
+            ]}
+          />
           <Separator />
-          {mounted && (
-            <Nav
-              isCollapsed={isCollapsed}
-              links={[
-                {
-                  title: "Sales Requests",
-                  label: "972",
-                  icon: Users2,
-                  variant: "ghost",
-                },
-                {
-                  title: "Updates",
-                  label: "342",
-                  icon: AlertCircle,
-                  variant: "ghost",
-                },
-                {
-                  title: "Admin",
-                  label: "",
-                  icon: Settings,
-                  variant: "ghost",
-                  href: "/admin"
-                }
-              ]}
-            />
-          )}
+          <Nav
+            isCollapsed={isCollapsed}
+            links={[
+              {
+                title: "Sales Requests",
+                label: "972",
+                icon: Users2,
+                variant: "ghost",
+              },
+              {
+                title: "Updates",
+                label: "342",
+                icon: AlertCircle,
+                variant: "ghost",
+              },
+              {
+                title: "Admin",
+                label: "",
+                icon: Settings,
+                variant: "ghost",
+                href: "/admin"
+              }
+            ]}
+          />
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={20}>
