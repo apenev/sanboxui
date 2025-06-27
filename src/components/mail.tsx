@@ -3,7 +3,7 @@
 
 import { useTheme } from "next-themes"
 import * as React from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import dynamic from "next/dynamic"
 import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
@@ -20,6 +20,10 @@ import { MailList } from "./mail/mail-list"
 import { Nav } from "./nav"
 import { type Mail } from "../data/sales-data"
 import { useMail } from "./mail/use-mail"
+
+// Dynamically import framer-motion components to prevent SSR hydration mismatch
+const motion = dynamic(() => import("framer-motion").then(mod => ({ default: mod.motion })), { ssr: false })
+const AnimatePresence = dynamic(() => import("framer-motion").then(mod => ({ default: mod.AnimatePresence })), { ssr: false })
 
 interface NavLink {
   title: string
