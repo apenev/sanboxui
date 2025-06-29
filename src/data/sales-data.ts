@@ -263,89 +263,92 @@ export const salesRequests: SalesRequest[] = [
     aiAnalysis: {
       type: "Technical question",
       confidence: 0.7,
-      marketAnalysis: `## CompetitorProbe Results
+      marketAnalysis: `**CompetitorProbe Results**
 Total results: 10
 
-**C9300-24U-A** - **444.51 EUR** - **Cisco C9300-24U-A** - Gebraucht - **planet.refurbished**
-**C9300-24U-A** - **524.42 EUR** - **Cisco C9300-24U-A Catalyst 9300 24-Port UPOE Switch with Network Advantage** - Gut - Refurbished - **esphere_network**
-**C9300-24U-A** - **611.82 EUR** - **Cisco C9300-24U-A | refurbished | incl. VAT** - Gebraucht - **minutio**
-**C9300-24U-A** - **654.00 EUR** - **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** - Sehr gut - Refurbished - **cybertrading_gmbh**
-**C9300-24U-A** - **754.67 EUR** - **Cisco C9300-24U-A generalüberholt** - Gebraucht - **it-planet-com**
-**C9300-24U-A** - **824.00 EUR** - **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** - Sehr gut - Refurbished - **cybertrading_gmbh**
-**C9300-24U-A** - **1624.00 EUR** - **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** - Neu: Sonstige (siehe Artikelbeschreibung) - **cybertrading_gmbh**
-**C9300-24U-A** - **1670.64 EUR** - **Cisco C9300-24U-A neu** - Neu - **it-planet-com**
-**C9300-24U-A** - **1974.00 EUR** - **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** - Neu - **cybertrading_gmbh**
-**C9300-24U-A** - **4278.19 EUR** - **Cisco - C9300-24U-A - Catalyst 9300 - Network Advantage - Switch - L3 - managed** - Neu - **tonitrus_gmbh**
+**C9300-24U-A** | **444.51** | **Cisco C9300-24U-A** | Gebraucht | **planet.refurbished**
+**C9300-24U-A** | **524.42** | **Cisco C9300-24U-A Catalyst 9300 24-Port UPOE Switch with Network Advantage** | Gut - Refurbished | **esphere_network**
+**C9300-24U-A** | **611.82** | **Cisco C9300-24U-A | refurbished | incl. VAT** | Gebraucht | **minutio**
+**C9300-24U-A** | **654.00** | **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** | Sehr gut - Refurbished | **cybertrading_gmbh**
+**C9300-24U-A** | **754.67** | **Cisco C9300-24U-A generalüberholt** | Gebraucht | **it-planet-com**
+**C9300-24U-A** | **824.00** | **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** | Sehr gut - Refurbished | **cybertrading_gmbh**
+**C9300-24U-A** | **1624.00** | **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** | Neu: Sonstige (siehe Artikelbeschreibung) | **cybertrading_gmbh**
+**C9300-24U-A** | **1670.64** | **Cisco C9300-24U-A neu** | Neu | **it-planet-com**
+**C9300-24U-A** | **1974.00** | **Cisco C9300-24U-A Switch - 24 Anschlüsse - L3 - managed - stapelbar inkl VAT** | Neu | **cybertrading_gmbh**
+**C9300-24U-A** | **4278.19** | **Cisco - C9300-24U-A - Catalyst 9300 - Network Advantage - Switch - L3 - managed** | Neu | **tonitrus_gmbh**
 
-## EbayProbe Results
+**EbayProbe Results**
 Total results: 40
 
-**C9300-24U-A** - **Cisco Catalyst 9300 24-port UPOE | Network Advantage | C9300-24U-A** - Used - **597.79 EUR** - Good option for sourcing - used condition at competitive price
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24-port UPOE Switch, Network Advantage** - Used - **257.70 EUR** - Excellent sourcing opportunity - very low price for used condition
-**C9300-24U-A** - **CISCO C9300-24U-A / CATALYST 9300 24 UPOE SWITCH 24-PORT 1G +NETWORK ADVANTAGE** - Used - **257.91 EUR** - Excellent sourcing opportunity - very low price for used condition
-**C9300-24U-A** - **Cisco C9300-24U-A 24-Port UPoE Network Advantage Switch *Cosmetic Damage*** - Used - **213.50 EUR** - Good sourcing option despite cosmetic damage - very low price
-**C9300-24U-A** - **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch** - Used - **333.06 EUR** - Good sourcing opportunity - competitive used price
-**C9300-24U-A** - **Cisco Catalyst 9300 24 UPOE C9300-24U-A** - Used - **340.74 EUR** - Good sourcing opportunity - competitive used price
-**C9300-24U-A** - **Cisco Catalyst 9300 24 UPOE C9300-24U-A** - Used - **341.59 EUR** - Good sourcing opportunity - competitive used price
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24 POrt UPOE Advantage** - Used - **384.30 EUR** - Good sourcing opportunity - competitive used price
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24-Port UPOE w/ AC Power *WARRANTY*** - Used - **422.73 EUR** - Good sourcing option with warranty included
-**C9300-24U-A** - **Cisco C9300-24U-A - 24 Ports Fully Managed Power over Ethernet Switch** - Used - **452.62 EUR** - Viable sourcing option from China
-**C9300-24U-A** - **Cisco C9300-24U-A 24-port UPOE Ethernet Network Advantage Switch** - Used - **678.93 EUR** - Higher priced used option
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24-port 1G , UPOE, Network Advantage** - Used - **853.15 EUR** - Higher priced used option
-**C9300-24U-A** - **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch- 1 Year Warranty** - Used - **938.55 EUR** - Higher priced but includes 1-year warranty
-**C9300-24U-A** - **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch-Lifetime Warranty** - Very Good - Refurbished - **947.94 EUR** - Good refurbished option with lifetime warranty
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 Series 24-Port UPOE Network Advantage Switch** - New - **1195.60 EUR** - Good new unit price for sourcing
-**C9300-24U-A** - **New Cisco C9300-24U-A 24-port 1G copper UPOE switch, modular uplinks, UPOE** - Open box - **1237.45 EUR** - Good open box option
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24 Port UPoE Managed L3 Switch 1pcs PSU, New** - Open box - **1238.30 EUR** - Good open box option
-**C9300-24U-A** - **NOB Cisco C9300-24U-A Catalyst 9300 24 Port UPoE Managed L3 Switch** - Open box - **1238.30 EUR** - Good open box option
-**C9300-24U-A** - **NEW Cisco Catalyst C9300-24U-A 24 Port UPOE Switch 1- Year Warranty** - New - **1276.73 EUR** - Good new unit with warranty
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24 Port UPoE Managed L3 Switch New** - New - **1408.25 EUR** - New unit option
-**C9300-24U-A** - **NEW Cisco Catalyst C9300-24U-A 24 Port UPOE Switch** - New - **1408.25 EUR** - New unit option
-**C9300-24U-A** - **Cisco C9300-24U-A 24 Ports Fully Managed Power New Sealed** - New - **1618.65 EUR** - New sealed unit
-**C9300-24U-A** - **9300 series C9300-24U-A 48-Port Gigabit UPoE Switch New Sealed Fast Shipping** - New - **1661.03 EUR** - Note: Title mentions 48-port but SKU is 24-port - potential mislisting
-**C9300-24U-A** - **Cisco C9300-24U-A 24 Port Gigabit UPoE Network Advantage Switch Fully Tested** - Used - **1974.93 EUR** - Overpriced used unit from Australia
-**C9300-24U-A** - **Cisco C9300-24U-A Catalyst 9300 24-port UPOE, Network Advantage** - Open box - **2045.33 EUR** - Overpriced open box unit
-**C9300-24U-A** - **New Original CISCO Switch C9300-24U-A DHL Free Shipping** - New - **3214.20 EUR** - Overpriced new unit from China
-**C9300-24U-A** - **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch** - New - **3257.30 EUR** - Overpriced new unit from Hong Kong
-**C9300-24U-A** - **New sealed Cisco C9300-24U-A Cisco Catalyst 9300 Series Switch** - New - **3315.23 EUR** - Overpriced new unit from Korea
-**C9300-24U-A** - **New Cisco C9300-24U-A DHL UPS fedex Express transport** - New - **3329.75 EUR** - Overpriced new unit from China
-**C9300-24U-A** - **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch** - New - **3365.27 EUR** - Overpriced new unit from Hong Kong
-**C9300-24U-A** - **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch fedex or DHL** - New - **3365.27 EUR** - Overpriced new unit from China
-**C9300-24U-A** - **CISCO New Original Genuine Switch C9300-24U-A one-year warranty** - New - **3608.15 EUR** - Overpriced new unit from China
-**C9300-24U-A** - **CISCO New Original Genuine Switch C9300-24U-A one-year warranty** - New - **3705.97 EUR** - Overpriced new unit from China
-**C9300-24U-A** - **Cisco Catalyst C9300-24U-A C9300-24U-E 24 UPOE Faceplate for Replacement** - New - **65.33 EUR** - Not the actual switch - just faceplate
-**C9300-24U-A** - **Cisco C9300-24U-A C9300-24U-E Faceplate for Replacement C9300** - New - **76.86 EUR** - Not the actual switch - just faceplate
-**C9300-24U-A** - **Cisco Catalyst C9300-24U-A C9300-24U-E 24 UPOE Faceplate for Replacement /xjk** - New - **68.32 EUR** - Not the actual switch - just faceplate
+**C9300-24U-A** | **Cisco Catalyst 9300 24-port UPOE | Network Advantage | C9300-24U-A** | Used | **597.79 EUR** | Link | Good option for sourcing - used condition at competitive price
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24-port UPOE Switch, Network Advantage** | Used | **257.70 EUR** | Link | Excellent sourcing opportunity - very low price for used condition
+**C9300-24U-A** | **CISCO C9300-24U-A / CATALYST 9300 24 UPOE SWITCH 24-PORT 1G +NETWORK ADVANTAGE** | Used | **257.91 EUR** | Link | Excellent sourcing opportunity - very low price for used condition
+**C9300-24U-A** | **Cisco C9300-24U-A 24-Port UPoE Network Advantage Switch Cosmetic Damage** | Used | **213.50 EUR** | Link | Good sourcing option despite cosmetic damage - very low price
+**C9300-24U-A** | **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch** | Used | **333.06 EUR** | Link | Good sourcing opportunity - competitive used price
+**C9300-24U-A** | **Cisco Catalyst 9300 24 UPOE C9300-24U-A** | Used | **340.74 EUR** | Link | Good sourcing opportunity - competitive used price
+**C9300-24U-A** | **Cisco Catalyst 9300 24 UPOE C9300-24U-A** | Used | **341.59 EUR** | Link | Good sourcing opportunity - competitive used price
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24 POrt UPOE Advantage** | Used | **384.30 EUR** | Link | Good sourcing opportunity - competitive used price
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24-Port UPOE w/ AC Power WARRANTY** | Used | **422.73 EUR** | Link | Good sourcing option with warranty included
+**C9300-24U-A** | **Cisco C9300-24U-A - 24 Ports Fully Managed Power over Ethernet Switch** | Used | **452.62 EUR** | Link | Viable sourcing option from China
+**C9300-24U-A** | **Cisco C9300-24U-A 24-port UPOE Ethernet Network Advantage Switch** | Used | **678.93 EUR** | Link | Higher priced used option
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24-port 1G , UPOE, Network Advantage** | Used | **853.15 EUR** | Link | Higher priced used option
+**C9300-24U-A** | **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch- 1 Year Warranty** | Used | **938.55 EUR** | Link | Higher priced but includes 1-year warranty
+**C9300-24U-A** | **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch-Lifetime Warranty** | Very Good - Refurbished | **947.94 EUR** | Link | Good refurbished option with lifetime warranty
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 Series 24-Port UPOE Network Advantage Switch** | New | **1195.60 EUR** | Link | Good new unit price for sourcing
+**C9300-24U-A** | **New Cisco C9300-24U-A 24-port 1G copper UPOE switch, modular uplinks, UPOE** | Open box | **1237.45 EUR** | Link | Good open box option
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24 Port UPoE Managed L3 Switch 1pcs PSU, New** | Open box | **1238.30 EUR** | Link | Good open box option
+**C9300-24U-A** | **NOB Cisco C9300-24U-A Catalyst 9300 24 Port UPoE Managed L3 Switch** | Open box | **1238.30 EUR** | Link | Good open box option
+**C9300-24U-A** | **NEW Cisco Catalyst C9300-24U-A 24 Port UPOE Switch 1- Year Warranty** | New | **1276.73 EUR** | Link | Good new unit with warranty
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24 Port UPoE Managed L3 Switch New** | New | **1408.25 EUR** | Link | New unit option
+**C9300-24U-A** | **NEW Cisco Catalyst C9300-24U-A 24 Port UPOE Switch** | New | **1408.25 EUR** | Link | New unit option
+**C9300-24U-A** | **Cisco C9300-24U-A 24 Ports Fully Managed Power New Sealed** | New | **1618.65 EUR** | Link | New sealed unit
+**C9300-24U-A** | **9300 series C9300-24U-A 48-Port Gigabit UPoE Switch New Sealed Fast Shipping** | New | **1661.03 EUR** | Link | Note: Title mentions 48-port but SKU is 24-port - potential mislisting
+**C9300-24U-A** | **Cisco C9300-24U-A 24 Port Gigabit UPoE Network Advantage Switch Fully Tested** | Used | **1974.93 EUR** | Link | Overpriced used unit from Australia
+**C9300-24U-A** | **Cisco C9300-24U-A Catalyst 9300 24-port UPOE, Network Advantage** | Open box | **2045.33 EUR** | Link | Overpriced open box unit
+**C9300-24U-A** | **New Original CISCO Switch C9300-24U-A DHL Free Shipping** | New | **3214.20 EUR** | Link | Overpriced new unit from China
+**C9300-24U-A** | **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch** | New | **3257.30 EUR** | Link | Overpriced new unit from Hong Kong
+**C9300-24U-A** | **New sealed Cisco C9300-24U-A Cisco Catalyst 9300 Series Switch** | New | **3315.23 EUR** | Link | Overpriced new unit from Korea
+**C9300-24U-A** | **New Cisco C9300-24U-A DHL UPS fedex Express transport** | New | **3329.75 EUR** | Link | Overpriced new unit from China
+**C9300-24U-A** | **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch** | New | **3365.27 EUR** | Link | Overpriced new unit from Hong Kong
+**C9300-24U-A** | **Cisco C9300-24U-A 9300 24-Port UPOE Network Advantage Switch fedex or DHL** | New | **3365.27 EUR** | Link | Overpriced new unit from China
+**C9300-24U-A** | **CISCO New Original Genuine Switch C9300-24U-A one-year warranty** | New | **3608.15 EUR** | Link | Overpriced new unit from China
+**C9300-24U-A** | **CISCO New Original Genuine Switch C9300-24U-A one-year warranty** | New | **3705.97 EUR** | Link | Overpriced new unit from China
+**C9300-24U-A** | **Cisco Catalyst C9300-24U-A C9300-24U-E 24 UPOE Faceplate for Replacement** | New | **65.33 EUR** | Link | Not the actual switch - just faceplate
+**C9300-24U-A** | **Cisco C9300-24U-A C9300-24U-E Faceplate for Replacement C9300** | New | **76.86 EUR** | Link | Not the actual switch - just faceplate
+**C9300-24U-A** | **Cisco Catalyst C9300-24U-A C9300-24U-E 24 UPOE Faceplate for Replacement /xjk** | New | **68.32 EUR** | Link | Not the actual switch - just faceplate
 
-## Pricing Analysis
+**Pricing Analysis**
 
 We do not have the **C9300-24U-A** in stock. The competitor market shows a wide range of prices:
+
 • **Used/Refurbished**: **444.51 EUR** to **824.00 EUR**
 • **New**: **1624.00 EUR** to **4278.19 EUR**
 
 The lowest competitor price for used/refurbished units is **444.51 EUR** from **planet.refurbished**.
 
 On eBay.com, there are excellent sourcing opportunities:
+
 • **Best used options**: Starting from **213.50 EUR** (with cosmetic damage) to **597.79 EUR**
 • **New units**: Starting from **1195.60 EUR** to **1408.25 EUR** (reasonable prices)
 
 For sourcing calculations (adding 200 EUR shipping from US):
+
 • **Used units**: 213.50 + 200 = 413.50 EUR cost, can sell around 540-580 EUR (30%+ margin)
 • **New units**: 1195.60 + 200 = 1395.60 EUR cost, can sell around 1815-1900 EUR (30%+ margin)
 
-## Offer for Client
+**Offer for Client**
 
 **Cisco C9300-24U-A - Catalyst 9300 24-Port UPOE Switch with Network Advantage**
 
 We can provide the following options for the **C9300-24U-A**:
 
-### Option 1: Used/Refurbished Unit
+**Option 1: Used/Refurbished Unit**
 • **Price**: **440 EUR**
 • **Condition**: Used, fully tested and functional
 • **Lead time**: 2-3 weeks
 • **Warranty**: 90 days
 
-### Option 2: New Unit
+**Option 2: New Unit**
 • **Price**: **1850 EUR**
 • **Condition**: Brand new, factory sealed
 • **Lead time**: 2-3 weeks
