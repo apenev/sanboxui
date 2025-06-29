@@ -107,6 +107,22 @@ export function MailDisplay({ mail }: MailDisplayProps) {
     return result
   }
 
+  const formatLastOrderDate = (dateValue: string | Date): string => {
+    if (dateValue === "Never" || !dateValue) {
+      return "Never"
+    }
+    
+    try {
+      const date = new Date(dateValue)
+      if (isNaN(date.getTime())) {
+        return "Never"
+      }
+      return format(date, "MM/dd/yyyy", { locale: enUS })
+    } catch {
+      return "Never"
+    }
+  }
+
   return (
     <div className="flex h-full flex-col">
       {/* Header with actions */}
@@ -383,7 +399,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       <div>
                         <label className="text-sm font-medium">Last Order</label>
                         <p className="text-sm text-muted-foreground">
-                          {format(new Date(salesRequest.client.orderHistory.lastOrderDate), "MM/dd/yyyy", { locale: enUS })}
+                          {formatLastOrderDate(salesRequest.client.orderHistory.lastOrderDate)}
                         </p>
                       </div>
                       <div>
