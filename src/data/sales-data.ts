@@ -415,7 +415,44 @@ Both options include shipping to your location. Please let us know which option 
     aiAnalysis: {
       type: "WTB ( want to buy )",
       confidence: 0.85,
-      marketAnalysis: "Mark Johnson from TechNet Solutions LLC is offering a used Cisco Catalyst 2960-X-48TS-L switch. This is a reverse sales inquiry where they want to sell equipment to us. The used networking equipment market shows good demand for quality Cisco switches at competitive prices.",
+      marketAnalysis: `Based on your competitive analysis for the **Cisco Catalyst 2960X-48TS-L** switch, here's a strategic pricing recommendation:
+
+**Recommended Pricing Strategy**
+
+**Target Selling Price: €410-415**
+
+• Undercuts competitor (**etree-gmbh**) by **€3-8** while maintaining strong margins
+• Positions you competitively without triggering a price war
+
+**Sourcing & Margin Analysis**
+
+**Primary Sourcing Option:**
+
+• Used unit at **€82.84** + **€200** shipping = **€282.84** total cost
+• Selling at **€410**: **45%** gross margin (**€127.16** profit)
+• Selling at **€415**: **46%** gross margin (**€132.16** profit)
+
+**Alternative Sourcing (Higher Quality):**
+
+• Refurbished with warranty at **€319.56** total cost
+• Selling at **€410**: **28%** gross margin (**€90.44** profit)
+• Better for brand reputation and customer satisfaction
+
+**Strategic Considerations**
+
+**Advantages of this pricing:**
+
+• Beats competitor price while maintaining healthy margins
+• Room for negotiation if customers compare prices
+• Strong profit margins even with conservative estimates
+
+**Risk Factors:**
+
+• Used equipment may require additional quality assurance
+• Brexit complications with the **€40.55** GB option
+• International shipping costs and delivery times
+
+**Recommendation:** Source the tested unit at **€282.84** total cost and price at **€410-412** to optimize the balance between competitiveness and profitability.`,
       matchingProducts: [products[6]],
       riskAssessment: {
         score: 65,
