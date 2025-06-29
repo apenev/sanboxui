@@ -130,21 +130,6 @@ export const clients: Client[] = [{
 },
 {
   id: "4",
-  name: "Vienna Digital Hub GmbH",
-  email: "tech@vienna-digital.com",
-  company: "Vienna Digital Hub GmbH",
-  revenue: 2900000,
-  industry: "Digital Transformation",
-  orderHistory: {
-    totalOrders: 89,
-    lastOrderDate: "2024-06-15T16:45:00Z",
-    averageOrderValue: 14500,
-    totalRevenue: 1290500
-  },
-  riskScore: 15
-},
-{
-  id: "5",
   name: "NetSecure Consulting",
   email: "procurement@netsecure.de",
   company: "NetSecure Consulting",
@@ -354,69 +339,16 @@ export const salesRequests: SalesRequest[] = [
   {
     id: "3",
     client: clients[3],
-    subject: "Bulk Order Barcode Scanners",
-    text: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nVienna Digital Hub GmbH",
-    date: "2024-05-07T16:45:00Z",
-    status: "new",
-    priority: "high",
-    thread: {
-      id: "thread-3",
-      messages: [
-        {
-          id: "msg-3",
-          from: "tech@vienna-digital.com",
-          to: "sales@company.com",
-          date: "2024-05-07T16:45:00Z",
-          content: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nVienna Digital Hub GmbH"
-        }
-      ]
-    },
-    aiAnalysis: {
-      type: "WTB ( want to buy )",
-      confidence: 0.95,
-      marketAnalysis: "Vienna Digital Hub GmbH is a premium customer with excellent payment history. Barcode scanners have stable demand in the retail sector.",
-      matchingProducts: [products[3]],
-      suggestedPrice: 4450,
-      marketData: {
-        averagePrice: 95,
-        priceRange: { min: 75, max: 120 },
-        trend: "stable",
-        competitorPrices: [
-          { competitor: "ScanTech", price: 92 },
-          { competitor: "BarcodePoint", price: 88 }
-        ],
-        recommendation: "Volume discount possible - very attractive deal."
-      },
-      riskAssessment: {
-        score: 95,
-        factors: ["Premium customer", "Large order quantity", "Excellent history"]
-      },
-      suggestedResponse: "Dear Sir or Madam,\n\nThank you for your bulk order of 50 barcode scanners.\n\n**Quote:**\n- 50x Barcode Scanner Pro\n- Unit price: [UNIT_PRICE] $\n- Volume discount: [DISCOUNT]%\n- Total price: [TOTAL_PRICE] $ (net)\n\n**Terms:**\n- Delivery time: [DELIVERY_TIME]\n- Payment terms: [PAYMENT_TERMS]\n- Warranty: [WARRANTY]\n\n**Additional Services:**\n- [EXTRA_1]\n- [EXTRA_2]\n\nWe look forward to your order.\n\nBest regards\nYour Sales Team",
-      placeholders: {
-        "UNIT_PRICE": "89",
-        "DISCOUNT": "15",
-        "TOTAL_PRICE": "3,782.50",
-        "DELIVERY_TIME": "1-2 business days",
-        "PAYMENT_TERMS": "30 days net",
-        "WARRANTY": "2-year warranty",
-        "EXTRA_1": "Free configuration",
-        "EXTRA_2": "Free spare parts for 1 year"
-      }
-    },
-  },
-  {
-    id: "4",
-    client: clients[4],
     subject: "SFP Module Compatibility Question",
     text: "Hello,\n\nI have 2x C9200L-24P-4G-A and I need suitable SFP modules that are 10G, what modules can you offer?\n\nBest regards\nNetSecure Consulting",
     date: "2024-01-16T14:20:00Z",
     status: "new",
     priority: "medium",
     thread: {
-      id: "thread-4",
+      id: "thread-3",
       messages: [
         {
-          id: "msg-4",
+          id: "msg-3",
           from: "procurement@netsecure.de",
           to: "sales@company.com",
           date: "2024-01-16T14:20:00Z",
@@ -445,7 +377,7 @@ export const salesRequests: SalesRequest[] = [
     },
   },
   {
-    id: "5",
+    id: "4",
     client: clients[1],
     subject: "Quote Request for Cisco 2960X Switch",
     text: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nMark Johnson",
@@ -453,10 +385,10 @@ export const salesRequests: SalesRequest[] = [
     status: "new",
     priority: "high",
     thread: {
-      id: "thread-5",
+      id: "thread-4",
       messages: [
         {
-          id: "msg-5",
+          id: "msg-4",
           from: "mjohnson@technet-solutions-example.com",
           to: "sales@company.com",
           date: "2024-01-17T10:45:00Z",
