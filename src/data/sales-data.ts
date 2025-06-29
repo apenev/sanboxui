@@ -353,70 +353,28 @@ export const salesRequests: SalesRequest[] = [
   },
   {
     id: "3",
-    client: clients[2],
-    subject: "IT Security Consultation",
-    text: "Good day,\n\nI'm interested in IT security consultation for my company. Please contact me to schedule an appointment.\n\nBest regards\nLeo Penev",
-    date: "2024-05-08T11:15:00Z",
+    client: clients[3],
+    subject: "Bulk Order Barcode Scanners",
+    text: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nVienna Digital Hub GmbH",
+    date: "2024-05-07T16:45:00Z",
     status: "new",
-    priority: "low",
+    priority: "high",
     thread: {
       id: "thread-3",
       messages: [
         {
           id: "msg-3",
-          from: "contact@leopenev.com",
-          to: "sales@company.com",
-          date: "2024-05-08T11:15:00Z",
-          content: "Good day,\n\nI'm interested in IT security consultation for my company. Please contact me to schedule an appointment.\n\nBest regards\nLeo Penev"
-        }
-      ]
-    },
-    aiAnalysis: {
-      type: "Consultation",
-      confidence: 0.81,
-      marketAnalysis: "Leo Penev runs a smaller consulting company. IT security is a growing market with high demand in the SME segment.",
-      matchingProducts: [products[2]],
-      suggestedPrice: 1990,
-      riskAssessment: {
-        score: 75,
-        factors: ["Smaller order size", "Consulting industry", "New business relationship"]
-      },
-      suggestedResponse: "Good day Mr. Penev,\n\nThank you for your interest in our IT security consultation.\n\n**Our Offer:**\n- Security Audit Basic: [PRICE] $\n- Scope: [SCOPE]\n- Duration: [DURATION]\n- Delivery time: [DELIVERY_TIME]\n\n**Available Appointments:**\n- [APPOINTMENT_1]\n- [APPOINTMENT_2]\n- [APPOINTMENT_3]\n\nWe'd be happy to schedule a non-binding initial consultation.\n\nBest regards\nYour Security Team",
-      placeholders: {
-        "PRICE": "1,990",
-        "SCOPE": "Complete security analysis",
-        "DURATION": "1 week",
-        "DELIVERY_TIME": "Can start immediately",
-        "APPOINTMENT_1": "Next Tuesday",
-        "APPOINTMENT_2": "Next Thursday", 
-        "APPOINTMENT_3": "Monday next week"
-      }
-    },
-  },
-  {
-    id: "4",
-    client: clients[3],
-    subject: "Bulk Order Barcode Scanners",
-    text: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nLabyPreise AG",
-    date: "2024-05-07T16:45:00Z",
-    status: "new",
-    priority: "high",
-    thread: {
-      id: "thread-4",
-      messages: [
-        {
-          id: "msg-4",
-          from: "contact@labypreise-ag.com",
+          from: "tech@vienna-digital.com",
           to: "sales@company.com",
           date: "2024-05-07T16:45:00Z",
-          content: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nLabyPreise AG"
+          content: "Dear Sir or Madam,\n\nWe would like to order 50 barcode scanners. Please send us a quote including delivery time.\n\nBest regards\nVienna Digital Hub GmbH"
         }
       ]
     },
     aiAnalysis: {
       type: "WTB ( want to buy )",
       confidence: 0.95,
-      marketAnalysis: "LabyPreise AG is a premium wholesale customer with excellent payment history. Barcode scanners have stable demand in the retail sector.",
+      marketAnalysis: "Vienna Digital Hub GmbH is a premium customer with excellent payment history. Barcode scanners have stable demand in the retail sector.",
       matchingProducts: [products[3]],
       suggestedPrice: 4450,
       marketData: {
@@ -447,7 +405,7 @@ export const salesRequests: SalesRequest[] = [
     },
   },
   {
-    id: "5",
+    id: "4",
     client: clients[4],
     subject: "SFP Module Compatibility Question",
     text: "Hello,\n\nI have 2x C9200L-24P-4G-A and I need suitable SFP modules that are 10G, what modules can you offer?\n\nBest regards\nNetSecure Consulting",
@@ -455,10 +413,10 @@ export const salesRequests: SalesRequest[] = [
     status: "new",
     priority: "medium",
     thread: {
-      id: "thread-5",
+      id: "thread-4",
       messages: [
         {
-          id: "msg-5",
+          id: "msg-4",
           from: "procurement@netsecure.de",
           to: "sales@company.com",
           date: "2024-01-16T14:20:00Z",
@@ -487,29 +445,29 @@ export const salesRequests: SalesRequest[] = [
     },
   },
   {
-    id: "6",
+    id: "5",
     client: clients[1],
     subject: "Quote Request for Cisco 2960X Switch",
-    text: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nDataCore Networks AG",
+    text: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nMark Johnson",
     date: "2024-01-17T10:45:00Z",
     status: "new",
     priority: "high",
     thread: {
-      id: "thread-6",
+      id: "thread-5",
       messages: [
         {
-          id: "msg-6",
-          from: "purchasing@datacore-networks.com",
+          id: "msg-5",
+          from: "mjohnson@technet-solutions-example.com",
           to: "sales@company.com",
           date: "2024-01-17T10:45:00Z",
-          content: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nDataCore Networks AG"
+          content: "Hello,\n\nCan you give me a quote for WS-C2960X-48TS-L, is it on stock? If not what would be the price for 4 of them?\n\nBest regards\nMark Johnson"
         }
       ]
     },
     aiAnalysis: {
       type: "RFQ ( Request for Quote )",
       confidence: 0.94,
-      marketAnalysis: "DataCore Networks AG is a premium telecommunications customer with excellent payment history and high-value orders. Cisco switches are in high demand in the enterprise market.",
+      marketAnalysis: "Mark Johnson from TechNet Solutions LLC is requesting a quote for Cisco switches. This appears to be a legitimate purchase inquiry from a network solutions company.",
       matchingProducts: [products[6]],
       suggestedPrice: 11400,
       marketData: {
@@ -520,13 +478,13 @@ export const salesRequests: SalesRequest[] = [
           { competitor: "NetworkPro", price: 2920 },
           { competitor: "CiscoPartner", price: 2880 }
         ],
-        recommendation: "Competitive pricing for premium customer with volume potential."
+        recommendation: "Competitive pricing for business customer with volume potential."
       },
       riskAssessment: {
-        score: 95,
-        factors: ["Premium customer", "Excellent payment history", "High-value orders", "Telecommunications industry"]
+        score: 75,
+        factors: ["New business relationship", "Network solutions industry", "Volume inquiry", "Professional request"]
       },
-      suggestedResponse: "Hello DataCore Networks AG,\n\nThank you for your inquiry about the Cisco Catalyst 2960X-48TS-L switch.\n\n**Stock Status & Quote:**\nYes, we have it on stock but we have just 2 units available. We could provide 2 more within 5 business days.\n\n**Pricing for 4 units:**\n- Unit price: [UNIT_PRICE] $\n- Total for 4 units: [TOTAL_PRICE] $ (net)\n- Volume discount: [DISCOUNT]% applied\n\n**Delivery Schedule:**\n- [IMMEDIATE_STOCK] units: [IMMEDIATE_DELIVERY]\n- [ADDITIONAL_STOCK] units: [ADDITIONAL_DELIVERY]\n\n**Product Specifications:**\n- [PORTS]\n- [FEATURES]\n- [WARRANTY]\n\n**Additional Services:**\n- [SERVICE_1]\n- [SERVICE_2]\n\nGiven your status as a premium customer, we can offer expedited delivery for the additional units if needed.\n\nBest regards\nYour Sales Team",
+      suggestedResponse: "Hello Mark Johnson,\n\nThank you for your inquiry about the Cisco Catalyst 2960X-48TS-L switch.\n\n**Stock Status & Quote:**\nYes, we have it on stock but we have just 2 units available. We could provide 2 more within 5 business days.\n\n**Pricing for 4 units:**\n- Unit price: [UNIT_PRICE] $\n- Total for 4 units: [TOTAL_PRICE] $ (net)\n- Volume discount: [DISCOUNT]% applied\n\n**Delivery Schedule:**\n- [IMMEDIATE_STOCK] units: [IMMEDIATE_DELIVERY]\n- [ADDITIONAL_STOCK] units: [ADDITIONAL_DELIVERY]\n\n**Product Specifications:**\n- [PORTS]\n- [FEATURES]\n- [WARRANTY]\n\n**Additional Services:**\n- [SERVICE_1]\n- [SERVICE_2]\n\nWe'd be happy to discuss your networking requirements further.\n\nBest regards\nYour Sales Team",
       placeholders: {
         "UNIT_PRICE": "2,850",
         "TOTAL_PRICE": "10,830",
@@ -539,7 +497,7 @@ export const salesRequests: SalesRequest[] = [
         "FEATURES": "Layer 2 switching, PoE+, Stackable",
         "WARRANTY": "Cisco limited lifetime warranty",
         "SERVICE_1": "Free configuration assistance",
-        "SERVICE_2": "Priority technical support"
+        "SERVICE_2": "Technical support included"
       }
     },
   },
