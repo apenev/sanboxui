@@ -705,7 +705,67 @@ The most competitive European competitor prices are around **9.5-25 EUR** for us
     aiAnalysis: {
       type: "RFQ ( Request for Quote )",
       confidence: 0.94,
-      marketAnalysis: "Mark Johnson from TechNet Solutions LLC is requesting a quote for Cisco switches. This appears to be a legitimate purchase inquiry from a network solutions company.",
+      marketAnalysis: `**CompetitorProbe Results**
+Total results: 1
+
+**2960X-48TS-L** | **418.54 EUR** | **Cisco Catalyst 2960X-48TS-L - Switch - managed** | New | **etree-gmbh**
+
+**EbayProbe Results**
+Total results: 8
+
+**2960X-48TS-L** | **CISCO WS-C2960X-48TS-L 48 Port GIGABIT Switch 2960X-48TS-L TESTED ios-15.2 2960X** | Used | **82.84 EUR** | Link | Viable - tested unit at good price, but needs +200 EUR shipping
+
+**2960X-48TS-L** | **Cisco WS-2960X-48TS-L Catalyst 2960-x Series 48 Port Network Switch 100-240v-ac** | New – Open box | **1941.64 EUR** | Link | Not viable - price too high even for new condition
+
+**2960X-48TS-L** | **Cisco Catalyst 2960X-48TS-L - switch - 48 ports - managed - r (WS-C2960X-48TS-L)** | New | **1280.15 EUR** | Link | Not viable - price too high after shipping costs
+
+**2960X-48TS-L** | **Cisco WS-2960X-48TS-L V05 48-Port PoE+ Network Switch-Lifetime Warranty** | Very Good - Refurbished | **119.56 EUR** | Link | Viable - good condition with warranty, competitive after shipping
+
+**2960X-48TS-L** | **Cisco Catalyst WS-2960X-48TS-L V05 48-Port PoE+ Network Switch** | Used | **119.56 EUR** | Link | Viable - good price for used condition
+
+**2960X-48TS-L** | **Cisco WS-C2960X-48TS-L Gigabit switch 2960X-48TS-L** | Used | **40.55 EUR** | Link | Viable - excellent price, but from GB (Brexit considerations)
+
+**2960X-48TS-L** | **Cisco Catalyst 2960X-48TS-L - switch - 48 ports - managed - r (WS-C2960X-48TS-L)** | New | **1601.25 EUR** | Link | Not viable - price too high
+
+**2960X-48TS-L** | **Cisco Catalyst WS-2960X-48TS-L V03 48-Port PoE+ Network Switch** | Used | **69.69 EUR** | Link | Viable - good price from Australia, but shipping may be complex
+
+**Pricing Analysis**
+
+We do not have the **Cisco Catalyst 2960X-48TS-L** in stock. Our main competitor (**etree-gmbh**) is offering a new unit at **418.54 EUR**.
+
+From eBay.com, we have several viable sourcing options:
+
+• **Best option**: Used unit at **82.84 EUR** + **200 EUR** shipping = **282.84 EUR** total cost
+• **Alternative**: Refurbished unit with warranty at **119.56 EUR** + **200 EUR** shipping = **319.56 EUR** total cost
+• **Budget option**: Used unit from GB at **40.55 EUR** (but Brexit complications may apply)
+
+For sourcing strategy:
+
+• **Cost**: **282.84 EUR** (used unit from US)
+• **With 30% margin**: **367.69 EUR**
+• **Competitor price**: **418.54 EUR**
+• **Our competitive price should be around 410-415 EUR** to beat competitor while maximizing profit
+
+**Offer for Client**
+
+**Cisco Catalyst 2960X-48TS-L - 48-Port Gigabit Managed Switch**
+
+We can offer you the **Cisco Catalyst 2960X-48TS-L** at **410 EUR**.
+
+**Product Details:**
+
+• 48 x 10/100/1000 Ethernet ports
+• 4 x 1G SFP uplink ports
+• Layer 2 switching
+• Managed switch with full feature set
+• **Condition**: Used/Refurbished (fully tested)
+• **Warranty**: Standard warranty included
+
+**Delivery**: 2-3 weeks (sourced from our trusted suppliers)
+
+This price beats our main competitor by approximately **2%** while ensuring quality and reliability. The switch will be fully tested before shipment.
+
+Would you like to proceed with this offer or do you need any additional specifications?`,
       matchingProducts: [products[6]],
       suggestedPrice: 11400,
       marketData: {
