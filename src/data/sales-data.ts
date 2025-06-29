@@ -100,18 +100,18 @@ export const clients: Client[] = [{
 },
 {
   id: "2",
-  name: "DataCore Networks AG",
-  email: "purchasing@datacore-networks.com",
-  company: "DataCore Networks AG",
-  revenue: 12800000,
-  industry: "Telecommunications",
+  name: "Mark Johnson",
+  email: "mjohnson@technet-solutions-example.com",
+  company: "TechNet Solutions LLC",
+  revenue: 1200000,
+  industry: "Network Solutions",
   orderHistory: {
-    totalOrders: 245,
-    lastOrderDate: "2024-06-20T09:15:00Z",
-    averageOrderValue: 35000,
-    totalRevenue: 8575000
+    totalOrders: 0,
+    lastOrderDate: "Never",
+    averageOrderValue: 0,
+    totalRevenue: 0
   },
-  riskScore: 8
+  riskScore: 45
 },
 {
   id: "3",
@@ -312,8 +312,8 @@ export const salesRequests: SalesRequest[] = [
   {
     id: "2",
     client: clients[1],
-    subject: "Price Overview for POS Systems",
-    text: "Hello,\n\nWe need a current price overview for your POS systems. Are there volume discounts?\n\nBest regards\nLabyPreise GmbH",
+    subject: "Used Cisco Switch for Sale - Cisco Catalyst 2960-X Series",
+    text: "Hello,\n\nI hope this email finds you well. My name is Mark Johnson and I work for a network solutions company here in Dallas.\n\nWe recently completed a network upgrade for one of our enterprise clients and have some used but fully functional Cisco switches available. Since I know many businesses are always looking for cost-effective networking solutions, I thought I'd reach out with the following offer:\n\nCisco Catalyst 2960-X-48TS-L\n\n48 x 10/100/1000 Ethernet Ports\n2 x 10G SFP+ Uplink Ports\nLayer 2 Switching\nPoE+ Support (370W)\nRack-mountable (1U)\n\nThis switch was operational for approximately 2 years in a climate-controlled data center environment and is in excellent condition. All ports are fully functional, and we can arrange an on-site functionality test if desired.\n\nAsking Price: $750 (plus applicable taxes)\nFor comparison: A new switch of this series currently retails for over $2,000.\n\nThe unit comes with original power cables and rack mounting hardware. We also have the original Cisco documentation and can provide proof of purchase if needed.\n\nIf you're interested or need additional technical specifications, please don't hesitate to contact me. I can also provide photos of the equipment and arrange for inspection.\n\nBest regards,\nMark Johnson\nTechNet Solutions LLC\nPhone: (214) 555-0123\nEmail: mjohnson@technet-solutions-example.com",
     date: "2024-05-09T14:30:00Z",
     status: "new",
     priority: "medium",
@@ -322,41 +322,32 @@ export const salesRequests: SalesRequest[] = [
       messages: [
         {
           id: "msg-2",
-          from: "contact@labypreise.de",
+          from: "mjohnson@technet-solutions-example.com",
           to: "sales@company.com",
           date: "2024-05-09T14:30:00Z",
-          content: "Hello,\n\nWe need a current price overview for your POS systems. Are there volume discounts?\n\nBest regards\nLabyPreise GmbH"
+          content: "Hello,\n\nI hope this email finds you well. My name is Mark Johnson and I work for a network solutions company here in Dallas.\n\nWe recently completed a network upgrade for one of our enterprise clients and have some used but fully functional Cisco switches available. Since I know many businesses are always looking for cost-effective networking solutions, I thought I'd reach out with the following offer:\n\nCisco Catalyst 2960-X-48TS-L\n\n48 x 10/100/1000 Ethernet Ports\n2 x 10G SFP+ Uplink Ports\nLayer 2 Switching\nPoE+ Support (370W)\nRack-mountable (1U)\n\nThis switch was operational for approximately 2 years in a climate-controlled data center environment and is in excellent condition. All ports are fully functional, and we can arrange an on-site functionality test if desired.\n\nAsking Price: $750 (plus applicable taxes)\nFor comparison: A new switch of this series currently retails for over $2,000.\n\nThe unit comes with original power cables and rack mounting hardware. We also have the original Cisco documentation and can provide proof of purchase if needed.\n\nIf you're interested or need additional technical specifications, please don't hesitate to contact me. I can also provide photos of the equipment and arrange for inspection.\n\nBest regards,\nMark Johnson\nTechNet Solutions LLC\nPhone: (214) 555-0123\nEmail: mjohnson@technet-solutions-example.com"
         }
       ]
     },
     aiAnalysis: {
-      type: "RFQ ( Request for Quote )",
-      confidence: 0.88,
-      marketAnalysis: "LabyPreise GmbH is an established trading partner with high order volume. POS systems show stable market with good margins.",
-      matchingProducts: [products[1]],
-      suggestedPrice: 1290,
-      marketData: {
-        averagePrice: 1350,
-        priceRange: { min: 1100, max: 1600 },
-        trend: "stable",
-        competitorPrices: [
-          { competitor: "POS Direct", price: 1320 },
-          { competitor: "Terminal Solutions", price: 1280 }
-        ],
-        recommendation: "Competitive pricing with potential for volume discounts."
-      },
+      type: "WTB ( want to buy )",
+      confidence: 0.85,
+      marketAnalysis: "Mark Johnson from TechNet Solutions LLC is offering a used Cisco Catalyst 2960-X-48TS-L switch. This is a reverse sales inquiry where they want to sell equipment to us. The used networking equipment market shows good demand for quality Cisco switches at competitive prices.",
+      matchingProducts: [products[6]],
       riskAssessment: {
-        score: 92,
-        factors: ["Excellent payment history", "High-volume customer", "Long-term relationship"]
+        score: 65,
+        factors: ["New business relationship", "Used equipment sale", "External vendor", "Requires verification"]
       },
-      suggestedResponse: "Hello LabyPreise GmbH Team,\n\nThank you for your inquiry about our POS systems.\n\n**Current Price List:**\n- POS Terminal Pro: [UNIT_PRICE] $ (unit price)\n- From 10 units: [VOLUME_PRICE_10] $ per unit\n- From 25 units: [VOLUME_PRICE_25] $ per unit\n\n**Additional Benefits:**\n- [DELIVERY_TIME]\n- [WARRANTY]\n- [SUPPORT]\n\nWe'd be happy to create an individual quote based on your desired quantity.\n\nBest regards\nYour Sales Team",
+      suggestedResponse: "Dear Mark Johnson,\n\nThank you for reaching out to us regarding the used Cisco Catalyst 2960-X-48TS-L switch.\n\nWe have forwarded your request to our internal procurement team for evaluation. You can expect an answer within [RESPONSE_TIME] business days.\n\n**Next Steps:**\nOur procurement team will review:\n- [REVIEW_ITEM_1]\n- [REVIEW_ITEM_2]\n- [REVIEW_ITEM_3]\n- [REVIEW_ITEM_4]\n\n**Required Information:**\nTo expedite the process, please prepare:\n- [REQUIRED_1]\n- [REQUIRED_2]\n- [REQUIRED_3]\n\nWe appreciate your interest in working with us and will be in touch soon.\n\nBest regards\nProcurement Team",
       placeholders: {
-        "UNIT_PRICE": "1,290",
-        "VOLUME_PRICE_10": "1,190",
-        "VOLUME_PRICE_25": "1,090",
-        "DELIVERY_TIME": "In stock",
-        "WARRANTY": "3-year warranty",
-        "SUPPORT": "Free setup service"
+        "RESPONSE_TIME": "5",
+        "REVIEW_ITEM_1": "Equipment condition and specifications",
+        "REVIEW_ITEM_2": "Pricing competitiveness",
+        "REVIEW_ITEM_3": "Documentation completeness",
+        "REVIEW_ITEM_4": "Current market demand",
+        "REQUIRED_1": "Detailed photos of the equipment",
+        "REQUIRED_2": "Proof of purchase documentation",
+        "REQUIRED_3": "Functionality test results"
       }
     },
   },
