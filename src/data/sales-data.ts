@@ -494,7 +494,178 @@ Both options include shipping to your location. Please let us know which option 
     aiAnalysis: {
       type: "Technical question",
       confidence: 0.96,
-      marketAnalysis: "NetSecure Consulting is a cybersecurity company with good technical knowledge. This is a technical compatibility question that requires accurate product information.",
+      marketAnalysis: `**WAWIProbe Results**
+Total results: 1
+
+**SFP-1G-T** | **34.0** | 1 | used | **Arista SFP-1G-T 100/1000BASE-T SFP Copper Transceiver**
+
+**CompetitorProbe Results**
+Total results: 60
+
+**SFP-1G-T** | **17.99** | **Arista GBIC SFP-1G-T 1000Base-T SFP RJ-45 100m Transceiver XVR-00007-02** | Hervorragend - Refurbished | **piospartslap**
+
+**SFP-1G-T** | **23.8** | **Juniper 3rd SFP-1G-T-C SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Sehr gut - Refurbished | **cybertrading_gmbh**
+
+**SFP-1G-T** | **15.0** | **Dell 0XTY28 / SFP-1G-T FCLF8521P2BTL-DL 1000base-T 100 m optischer Transceiver** | Gebraucht | **nesevo_com**
+
+**SFP-1G-T** | **9.5** | **Arista SFP-1G-T RJ-45 1000BASE-T XVR-00007-02 1GbE Copper SFP+ Module** | Gebraucht | **pos-traders**
+
+**SFP-1G-T** | **24.95** | **Pureoptics SFP-1G-T-FBX-PO 1000Base-T 100M SFP FRE Transceiver Module** | Gebraucht | **h.elsemann**
+
+**SFP-1G-T** | **18.93** | **Optical transceiver Arista SFP-1G-T 1Gb/s SFP 100m XVR-00007-02** | Gebraucht | **hardwaredirect_eu**
+
+**SFP-1G-T** | **22.68** | **SFP-1G-T FCLF8521P2BTL-DL 0XTY28 SFP-T 1GE RJ45 1000Base-T 100m module** | Gebraucht | **linghou08**
+
+**SFP-1G-T** | **22.68** | **SFP-1G-T FCLF8521P2BTL-DL 0XTY28 SFP-T 1GE RJ45 1000Base-T 100m module** | Gebraucht | **a642jiecan**
+
+**SFP-1G-T** | **29.75** | **Juniper SFP-1G-T-C SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Sehr gut - Refurbished | **cybertrading_gmbh**
+
+**SFP-1G-T** | **21.06** | **Arista SFP-1G-T Arista 1000Base-T RJ45 SFP Modul Arista XVR-00007-02** | Used | **abdula3617**
+
+**SFP-1G-T** | **22.23** | **Dell 1G Gigabit RJ45 1GBase-T SFP Modul Transceiver 0XTY28 SFP-1G-T** | Opened – never used | **mobileworld2442**
+
+**SFP-1G-T** | **12.92** | **Dell SFP-1G-T** | Neu: Sonstige | **planet.refurbished**
+
+**SFP-1G-T** | **25.23** | **SFP-1G-T FCLF8521P2BTL-DL 0XTY28 SFP-T 1GE RJ45 1000Base-T 100m module** | Gebraucht | **jieyun202306-d8**
+
+**SFP-1G-T** | **48.0** | **Dell SFP-1G-T Transceiver Modul 1GbE SFP RJ45 - 0XTY28** | Sehr gut - Refurbished | **gekko-computer**
+
+**SFP-1G-T** | **51.99** | **ARISTA - SFP-1G-T - 1G SR 1000BASE-T Ethernet Module Transceiver** | Gebraucht | **tonitrus_gmbh**
+
+**SFP-1G-T** | **53.61** | **StarTech.com ARISTA NETWORKS SFP-1G-T COMP SFP MODULE - COPPER TRANSCEIVER** | Neu | **rarewaves-outlet**
+
+**SFP-1G-T** | **49.67** | **Fasermodul SEP MultioModo Startech AR-SFP-1G-T-ST** | Neu | **voledv**
+
+**SFP-1G-T** | **57.11** | **TitanLINK Arista SFP-1G-T Premium SFP Transceiver kompatibel** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **59.9** | **DELL EMC Original SFP-1G-T 1000Base-T 100 m Transceiver Module 0XTY28 neu** | Sehr gut - Refurbished | **piospartslap**
+
+**SFP-1G-T** | **50.87** | **Origin Storage SFP-1G-T-JNP Juniper kompatibler Transceiver** | New | **youritdelivered**
+
+**SFP-1G-T** | **50.87** | **Origin Storage AR-SFP-1G-T Arista kompatibler Transceiver** | New | **youritdelivered**
+
+**SFP-1G-T** | **50.87** | **Origin Storage SFP-1G-T-AR Arista kompatibler Transceiver** | New | **youritdelivered**
+
+**SFP-1G-T** | **50.87** | **Origin Storage SFP-1G-T-DE Dell kompatibler Transceiver** | New | **youritdelivered**
+
+**SFP-1G-T** | **16.58** | **Sfpex Arista SFP-1G-T kompatibel RJ45 100Base-T** | Usato | **ntc_tech**
+
+**SFP-1G-T** | **64.24** | **Arista Networks SFP-1G-T kompatibler BlueOptics SFP** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **64.24** | **Intel SFP-1G-T-IT kompatibler BlueOptics SFP** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **64.24** | **Centec SFP-1G-T-CT kompatibler BlueOptics SFP** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **64.24** | **Dell EMC SFP-1G-T kompatibler BlueOptics SFP** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **64.24** | **DZS Zhone SFP-1G-T-ZH kompatibler BlueOptics SFP** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **64.24** | **Asus SFP-1G-T-AU kompatibler BlueOptics SFP** | Neu | **cbogmbh_mh**
+
+**SFP-1G-T** | **39.0** | **Dell SFP-1G-T 1000BASE-T SFP Copper RJ-45 FCLF8521P2BTL-DL XTY28** | Nuevo | **asturcash**
+
+**SFP-1G-T** | **65.45** | **Juniper SFP-1G-T-C SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Neu: Sonstige | **cybertrading_gmbh**
+
+**SFP-1G-T** | **66.0** | **Fasermodul SEP MultioModo Startech AR-SFP-1G-T-ST** | Neu | **elwayug**
+
+**SFP-1G-T** | **16.78** | **Sfpex Arista SFP-1G-T kompatibel RJ45 100BASE-T** | Occasion | **ntc_tech**
+
+**SFP-1G-T** | **58.0** | **gbic ARISTA SFP-1G-T XVR-10007-20** | Gebraucht | **refurb_servers**
+
+**SFP-1G-T** | **71.4** | **Juniper SFP-1G-T-C SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Sehr gut - Refurbished | **cybertrading_gmbh**
+
+**SFP-1G-T** | **71.4** | **Juniper 3rd SFP-1G-T-C SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Sehr gut - Refurbished | **cybertrading_gmbh**
+
+**SFP-1G-T** | **67.2** | **0065030885157 SFP-1G-T KOMPATIBLES/SFP MODUL - KUPFER-TRANSCEIVER** | Neu | **katomixshop**
+
+**SFP-1G-T** | **77.99** | **Lot of 5 Arista 1000BASE-T RJ45 SFP XVR-00007-02 for Arista 08T47V SFP-1G-T** | Gebraucht | **a627jiecansotre**
+
+**SFP-1G-T** | **98.0** | **Dell W127120130 814032 SFP-1G-T 1G 1000BASE-T TRANSCEIVER MODULE** | Gebraucht | **guru2000**
+
+**SFP-1G-T** | **109.15** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **nstindustrie**
+
+**SFP-1G-T** | **86.46** | **ATGBICS SFP-1G-T-DE-C Kupfer Netzwerk Transceiver Modul 1000 Mbit/s** | Nuovo | **ldcsrl-it**
+
+**SFP-1G-T** | **86.46** | **ATGBICS SFP-1G-T-AR-C Kupfer Netzwerk Transceiver Modul 1000 Mbit/s** | Nuovo | **ldcsrl-it**
+
+**SFP-1G-T** | **86.46** | **ATGBICS AR-SFP-1G-T-C Kupfer Netzwerk Transceiver Modul 1000 Mbit/s** | Nuovo | **ldcsrl-it**
+
+**SFP-1G-T** | **86.46** | **ATGBICS SFP-1G-T-X-MSA-AT Kupfer Netzwerk Transceiver Modul 1000 Mbit/s** | Nuovo | **ldcsrl-it**
+
+**SFP-1G-T** | **86.46** | **ATGBICS SFP-1G-T-C Kupfer Netzwerk Transceiver Modul 1000 Mbit/s** | Nuovo | **ldcsrl-it**
+
+**SFP-1G-T** | **90.61** | **ATGBICS SFP-1G-T-I-MSA-AT Kupfer Netzwerk Transceiver Modul 1000 Mbit/s** | Nuovo | **ldcsrl-it**
+
+**SFP-1G-T** | **142.8** | **Arista SFP-1G-T SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Neu | **cybertrading_gmbh**
+
+**SFP-1G-T** | **142.8** | **Juniper SFP-1G-T-C SFP (Mini-GBIC)-Transceiver-Modul inkl VAT** | Neu | **cybertrading_gmbh**
+
+**SFP-1G-T** | **122.22** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **a622jiecana622**
+
+**SFP-1G-T** | **123.22** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **2023a629-jiecan**
+
+**SFP-1G-T** | **136.95** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **2023f9chuanglin**
+
+**SFP-1G-T** | **152.34** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **deyib8**
+
+**SFP-1G-T** | **717.74** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **a622jiecana622**
+
+**SFP-1G-T** | **723.13** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **bizmarketd9**
+
+**SFP-1G-T** | **734.9** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **tianlong77**
+
+**SFP-1G-T** | **742.99** | **SFP-1G-T FCLF8521P2BTL-DL Gigabit Electrical Port Module 0XTY28** | Neu | **jiea628can**
+
+**EbayProbe Results**
+Total results: 200+
+
+**SFP-1G-T** | **Dell XTY28 SFP+ to 1GB Copper RJ45 Force10 SFP-1G-T Transceiver Module** | Used | **8.11 EUR** | Link | Viable - Good price for used Dell module, adding 200 EUR shipping = 208.11 EUR total
+
+**SFP-1G-T** | **Arista SFP-1G-T RJ-45 1000BASE-T 1GbE Copper SFP+ Transceiver XVR-00007-02** | Used | **16.22 EUR** | Link | Viable - Arista branded module, total cost 216.22 EUR
+
+**SFP-1G-T** | **F5 SFP-1G-T RJ-45 1000BASE-T OPT-0015-00 1GbE Copper RJ45 Transceiver** | Used | **12.77 EUR** | Link | Viable - F5 branded, total cost 212.77 EUR
+
+**SFP-1G-T** | **One Finisar FCLF8521P2BTL SFP-1G-T 1000BASE-T SFP Copper RJ-45 transceiver** | Open box | **9.39 EUR** | Link | Viable - Finisar OEM, total cost 209.39 EUR
+
+**SFP-1G-T** | **1 pc of ARISTA SFP-1G-T RJ-45 1000BASE-T XVR-00007-02 1GbE Copper SFP+** | Open box | **15.97 EUR** | Link | Viable - Arista branded, total cost 215.97 EUR
+
+**SFP-1G-T** | **AddOn SFP-1G-T-DE-AO Compatible TAA 10/100/1000Base-TX SFP Transceiver** | Used | **8.54 EUR** | Link | Viable - Compatible module, total cost 208.54 EUR
+
+**SFP-1G-T** | **Dell SFP-1G-T-WP 1000BASE-T SFP Copper RJ45 FCLF8521P2BTLDL1 01M0C3 transceiver** | Open box | **15.35 EUR** | Link | Viable - Dell branded, total cost 215.35 EUR
+
+**SFP-1G-T** | **Arista SFP-1G-T RJ-45 1000BASE-T XVR-00007-02 1GbE Copper SFP transceiver** | Used | **15.35 EUR** | Link | Viable - Arista branded, total cost 215.35 EUR
+
+**SFP-1G-T** | **SFP-1G-T Arista Compatible SFP 1000base-T Transceiver SFP-RJ45 XVR-00007-02** | Open box | **12.63 EUR** | Link | Viable - Compatible module, total cost 212.63 EUR
+
+**SFP-1G-T** | **1000BASE-T SFP RJ45 Copper Transceiver Module Compatible with Arista SFP-1G-T** | Open box | **12.77 EUR** | Link | Viable - Compatible module, total cost 212.77 EUR
+
+**SFP-1G-T** | **Dell SFP-1G-T FCLF8521P2BTL-DL 0XTY28 SFP-T 1GE RJ45 1000Base-T 100m transceiver** | Open box | **16.23 EUR** | Link | Viable - Dell branded, total cost 216.23 EUR
+
+**SFP-1G-T** | **ARISTA SFP-1G-T RJ-45 1000BASE-T XVR-10007-20 1GbE Copper SFP** | Used | **12.80 EUR** | Link | Viable - Arista branded, total cost 212.80 EUR
+
+**SFP-1G-T** | **407-BBOS PF911 Dell 1Gbps SFP-1G-T 1000Base-T Copper 100m RJ-45 SFP Transceiver** | Open box | **21.35 EUR** | Link | Viable - Dell branded, total cost 221.35 EUR
+
+**SFP-1G-T** | **Dell SFP-1G-T FCLF8521P2BTL-DL 1000BASE-T Copper RJ45 SFP-T Transceiver 0XTY28** | Used | **17.07 EUR** | Link | Viable - Dell branded, total cost 217.07 EUR
+
+**SFP-1G-T** | **NEW Lot of 5 Genuine Arista SFP-1G-T / XVR-10007-20 Transceiver Module** | New | **51.23 EUR** | Link | Viable - Lot of 5 new Arista modules, 10.25 EUR each + shipping = 210.25 EUR per unit
+
+**SFP-1G-T** | **Dell SFP-1G-T 1G Copper SFP 1000Base-T RJ45 Transceiver Module (XTY28)** | Used | **21.34 EUR** | Link | Viable - Dell branded, total cost 221.34 EUR
+
+**SFP-1G-T** | **Arista SFP-1G-T SFP+ to 1GbE 1000base-T RJ45 Copper XVR-10007-20 Transceiver** | New | **17.07 EUR** | Link | Viable - New Arista module, total cost 217.07 EUR
+
+**SFP-1G-T** | **FCLF-8521-3 Finisar FCLF85213 SFP-1G-T 1000BASE-T Copper RJ-45 SFP-T SFP RJ45** | Used | **5.94 EUR** | Link | Viable - Very good price for Finisar, total cost 205.94 EUR
+
+**SFP-1G-T** | **Arista SFP-1G-T compatible SFP-RJ45 XVR-00007-02 SFP-T 1000base-T 100m RJ45** | New | **11.08 EUR** | Link | Viable - New compatible module, total cost 211.08 EUR
+
+**SFP-1G-T** | **Finisar SFP-1G-T RJ-45 1000BASE-T FCLF-8521-3 1GbE Copper RJ45 SFP Transceiver** | Used | **12.77 EUR** | Link | Viable - Finisar branded, total cost 212.77 EUR
+
+**Pricing Analysis**
+
+We have one unit of **Arista SFP-1G-T** in used condition priced at **34 EUR** in stock. The competitor prices range from **9.5 EUR** to over **700 EUR**, with most reasonable prices falling between **15-60 EUR** for used/refurbished units and **50-150 EUR** for new units.
+
+On eBay.com, there are excellent sourcing opportunities with prices starting from **5.94 EUR** for used **Finisar** modules and going up to around **25 EUR** for new branded modules. After adding **200 EUR** shipping from the US, the total sourcing cost would range from **205.94 EUR** to **225 EUR**.
+
+The most competitive European competitor prices are around **9.5-25 EUR** for used/refurbished units, which suggests strong price competition in the market.`,
       matchingProducts: [products[4], products[5]],
       riskAssessment: {
         score: 82,
