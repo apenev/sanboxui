@@ -22,19 +22,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Progress } from "@/components/ui/progress"
 import { Input } from "@/components/ui/input"
-import { SalesRequest } from "@/data/sales-data"
-
-interface Mail {
-  id: string
-  name: string
-  email: string
-  subject: string
-  text: string
-  date: string
-  read: boolean
-  labels: string[]
-  salesRequest?: SalesRequest
-}
+import { Mail, SalesRequest } from "@/data/sales-data"
 
 interface MailDisplayProps {
   mail: Mail | null
@@ -50,6 +38,81 @@ export function MailDisplay({ mail }: MailDisplayProps) {
       setPlaceholders(mail.salesRequest.aiAnalysis.placeholders)
     }
   }, [mail])
+
+  const formatLastOrderDate = (dateValue: string | Date): string => {
+    if (dateValue === "Never" || !dateValue) {
+      return "Never"
+    }
+    
+    try {
+      const date = new Date(dateValue)
+      if (isNaN(date.getTime())) {
+        return "Never"
+      }
+      return format(date, "MM/dd/yyyy", { locale: enUS })
+    } catch {
+      return "Never"
+    }
+  }
+
+  const formatMarketAnalysis = (text: string) => {
+    // Split text into lines and process each line
+    const lines = text.split('\n')
+    const elements: React.ReactNode[] = []
+    
+    lines.forEach((line, index) => {
+      if (line.trim() === '') {
+        elements.push(<br key={`br-${index}`} />)
+        return
+      }
+
+      // Handle headers (lines starting with **)
+      if (line.startsWith('**') && line.endsWith('**') && line.length > 4) {
+        const headerText = line.slice(2, -2)
+        elements.push(
+          <h3 key={`header-${index}`} className="text-lg font-bold text-foreground mt-4 mb-2">
+            {headerText}
+          </h3>
+        )
+        return
+      }
+
+      // Handle bullet points
+      if (line.startsWith('• ')) {
+        const bulletText = line.slice(2)
+        // Process bold text within bullet points
+        const processedText = processBoldText(bulletText)
+        elements.push(
+          <div key={`bullet-${index}`} className="ml-4 mb-1">
+            <span className="mr-2">•</span>
+            {processedText}
+          </div>
+        )
+        return
+      }
+
+      // Handle regular lines with potential bold text
+      const processedText = processBoldText(line)
+      elements.push(
+        <div key={`line-${index}`} className="mb-1">
+          {processedText}
+        </div>
+      )
+    })
+
+    return <div className="space-y-1">{elements}</div>
+  }
+
+  const processBoldText = (text: string): React.ReactNode[] => {
+    const parts = text.split(/(\*\*[^*]+\*\*)/g)
+    return parts.map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+        const boldText = part.slice(2, -2)
+        return <strong key={`bold-${index}`} className="font-bold">{boldText}</strong>
+      }
+      return <span key={`text-${index}`}>{part}</span>
+    })
+  }
 
   if (!mail) {
     return (
@@ -266,9 +329,9 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       <TrendingUp className="h-4 w-4 text-primary" />
                       Market Analysis
                     </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {salesRequest.aiAnalysis.marketAnalysis}
-                    </p>
+                    <div className="text-sm text-muted-foreground">
+                      {formatMarketAnalysis(salesRequest.aiAnalysis.marketAnalysis)}
+                    </div>
                   </div>
 
                   {/* Risk Assessment */}
@@ -395,7 +458,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       <div>
                         <label className="text-sm font-medium">Last Order</label>
                         <p className="text-sm text-muted-foreground">
-                          {format(new Date(salesRequest.client.orderHistory.lastOrderDate), "MM/dd/yyyy", { locale: enUS })}
+                          {formatLastOrderDate(salesRequest.client.orderHistory.lastOrderDate)}
                         </p>
                       </div>
                       <div>

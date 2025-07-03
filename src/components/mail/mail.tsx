@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
@@ -17,6 +16,7 @@ import {
   ShoppingCart,
   Trash2,
   Users2,
+  Settings,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -30,6 +30,7 @@ import { MailList } from "./mail-list"
 import { MailDisplay } from "./mail-display"
 import { useMail } from "./use-mail"
 import { ThemeToggle } from "@/components/theme-toggle"
+import type { Mail } from "@/data/sales-data"
 
 interface MailProps {
   accounts: {
@@ -37,7 +38,7 @@ interface MailProps {
     email: string
     icon: React.ReactNode
   }[]
-  mails: any[]
+  mails: Mail[]
   defaultLayout?: number[]
   defaultCollapsed?: boolean
   navCollapsedSize?: number
@@ -53,11 +54,6 @@ export function Mail({
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed)
   const [selectedMail, setSelectedMail] = React.useState<string | null>(null)
   const { theme, systemTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
 
   // Determine current theme
   const currentTheme = theme === 'system' ? systemTheme : theme
@@ -85,6 +81,12 @@ export function Mail({
               true
             )}`
           }}
+          onExpand={() => {
+            setIsCollapsed(false)
+            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
+              false
+            )}`
+          }}
           onResize={() => {
             setIsCollapsed(false)
             document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
@@ -103,22 +105,21 @@ export function Mail({
               isCollapsed ? "h-[52px] justify-center" : "px-2"
             )}
           >
-            {mounted && (
-              <img 
-                src={isCollapsed 
-                  ? (currentTheme === 'dark' 
-                      ? "/images/salescopilotalone-dark.png" 
-                      : "/images/salescopilotalone-light.png")
-                  : (currentTheme === 'dark' 
-                      ? "/images/salescopilot-dark.png" 
-                      : "/images/salescopilot-light.png")
-                }
-                alt="Sales Copilot" 
-                width={isCollapsed ? 30 : 150} 
-                height={30} 
-                className={`object-contain ${!isCollapsed ? 'ml-1' : ''}`}
-              />
-            )}
+            <img 
+              src={isCollapsed 
+                ? (currentTheme === 'dark' 
+                    ? "/images/salescopilotalone-dark.png" 
+                    : "/images/salescopilotalone-light.png")
+                : (currentTheme === 'dark' 
+                    ? "/images/salescopilot-dark.png" 
+                    : "/images/salescopilot-light.png")
+              }
+              alt="Sales Copilot" 
+              width={isCollapsed ? 30 : 150} 
+              height={30} 
+              className={`object-contain ${!isCollapsed ? 'ml-1' : ''}`}
+              suppressHydrationWarning={true}
+            />
           </div>
           <Separator />
           <Nav
@@ -129,6 +130,7 @@ export function Mail({
                 label: "128",
                 icon: Inbox,
                 variant: "default",
+                href: "/"
               },
               {
                 title: "Drafts",
@@ -165,6 +167,13 @@ export function Mail({
                 label: "342",
                 icon: AlertCircle,
                 variant: "ghost",
+              },
+              {
+                title: "Admin",
+                label: "",
+                icon: Settings,
+                variant: "ghost",
+                href: "/admin"
               }
             ]}
           />

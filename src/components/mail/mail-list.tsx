@@ -1,22 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { formatDistanceToNow } from "date-fns"
+import { format } from "date-fns"
 import { enUS } from "date-fns/locale"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
-
-export interface Mail {
-  id: string
-  name: string
-  email: string
-  subject: string
-  text: string
-  date: string
-  read: boolean
-  labels: string[]
-}
+import { Mail } from "@/data/sales-data"
 
 interface MailListProps {
   items: Mail[]
@@ -25,12 +15,6 @@ interface MailListProps {
 }
 
 export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
-
   const handleSelectMail = (mailId: string) => {
     onSelectMail(mailId)
   }
@@ -63,10 +47,9 @@ export function MailList({ items, selectedMail, onSelectMail }: MailListProps) {
                       : "text-muted-foreground"
                   )}
                 >
-                  {mounted ? formatDistanceToNow(new Date(item.date), {
-                    addSuffix: true,
+                  {format(new Date(item.date), 'MMM dd, HH:mm', {
                     locale: enUS,
-                  }) : new Date(item.date).toLocaleDateString()}
+                  })}
                 </div>
               </div>
               <div className="text-xs font-medium">{item.subject}</div>
